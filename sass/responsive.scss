@@ -12,6 +12,12 @@
         pointer-events: none;
     }
 
+    .scroll-top{
+        &:hover{
+            background-color: $main-cl;
+        }
+    }
+
     //  ========================== Header ==========================
     .menu-list {
         //level 1
@@ -19,7 +25,7 @@
             &:hover {
                 > a,
                 > span {
-                    color: red;
+                    color: $main-cl;
                 }
             }
         }
@@ -38,14 +44,17 @@
 
     .sub-menu {
         transition: all 0.3s ease;
-        transform: translateY(10px);
+        transform: translateY(0);
         pointer-events: none;
         @include hidden;
 
         a , span {
             &:hover {
                 color: #fff;
-                background-color: #1a2542;
+                background-color: $main-cl;
+                &::before{
+                    filter: brightness(0) invert(1);
+                }
             }
         }
     }
@@ -59,6 +68,12 @@
 }
 
 /* end screen-min:751px && screen-max:1500px */
+
+@include max-media (1440px){
+    .menu-list{
+        column-gap: 30px;
+    }
+}
 
 @include max-media(750px) {
     // ========================== Base code ==========================
@@ -130,7 +145,7 @@
         overflow-x: hidden;
         overflow-y: auto;
         height: calc(100vh - 100px);
-        // @include custom-vertical-scrollbar(3px, #1a2542);
+        // @include custom-vertical-scrollbar(3px, $main-cl);
 
         // style chung
         // a {
@@ -142,9 +157,8 @@
             > a,
             > span {
                 border-bottom: 1px solid #ebebeb;
-                font-size: 16px;
+                font-size: 14px;
                 font-weight: bold;
-                color: #004680;
                 padding: 10px 20px;
                 width: 100%;
                 display: block;
@@ -163,15 +177,23 @@
         span {
             &::before {
                 content: "";
-                border-top: solid 8px #1e2c63;
-                border-left: solid 8px transparent;
-                border-right: solid 8px transparent;
-                position: absolute;
                 right: 15px;
                 top: calc(50% - 4px);
-                transition: all 0.3s;
             }
         }
+
+        // span {
+        //     &::before {
+        //         content: "";
+        //         border-top: solid 8px #1e2c63;
+        //         border-left: solid 8px transparent;
+        //         border-right: solid 8px transparent;
+        //         position: absolute;
+        //         right: 15px;
+        //         top: calc(50% - 4px);
+        //         transition: all 0.3s;
+        //     }
+        // }
     }
 
     .sub-menu {
@@ -183,18 +205,9 @@
         padding: 10px 20px;
 
         a , span{
-            padding: 6px 16px;
+            padding: 10px;
             position: relative;
-
-            &::after {
-                content: "";
-                position: absolute;
-                top: 16px;
-                left: 0;
-                width: 10px;
-                height: 1px;
-                background-color: #004680;
-            }
+            font-size: 14px;
         }
 
         .sub-menu a {

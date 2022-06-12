@@ -5,13 +5,100 @@
     margin-top: auto;
 
     .copyright {
-        padding: 14px 0;
+        @include flex-mid;
+        height: 40px;
         text-align: center;
-        color: #92d4e1;
-        background: #004870;
-        font-size: 11px;
-        letter-spacing: 0.005em;
+        color: #fff;
+        background: $main-cl;
+        letter-spacing: 1.4px;
+    }
+
+    .footer-top {
+        background-color: #f9f9f9;
+        padding: 47px 0 98px;
+    }
+
+    .col {
+        border-left: 1px $main-cl solid;
+
+        &:nth-child(1) {
+            width: calc(100% - 458px);
+            border: none;
+        }
+
+        &:nth-child(2){
+            width: 232px;
+        }
+
+        &:nth-child(3) {
+            width: 226px;
+        }
+
+        &:nth-child(2) , &:nth-child(3){
+            margin-top: 39px;
+        }
+
+    }
+
+    .ft-logo {
+        margin-bottom: 37px;
+        display: block;
+    }
+
+    .ft-lst {
+        li {
+            margin-bottom: 9px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+      
+    }
+
+    .ft-box {
+        padding-left: 45px;
+    }
+
+    .ft-tt {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 21px;
+        line-height: 1.8;
+        letter-spacing: 2px;
+    }
+
+    .ft-list {
+        li {
+            margin-bottom: 25px;
+
+            &:last-child {
+                margin-bottom: 0;
+
+                a {
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        background-image: url('../images/svg/ic-email.svg');
+                        background-size: cover;
+                        width: 12px;
+                        height: 8px;
+                        margin-right: 5px;
+                        transform: translate(1px , -3px);
+                    }
+                }
+            }
+        }
+
+        a {
+            font-weight: 500;
+            position: relative;
+            letter-spacing: 1.4px;
+            &:hover{
+                color: $main-cl;
+            }
+        }
+
+
     }
 }
-
-

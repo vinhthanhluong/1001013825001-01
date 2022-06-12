@@ -1,35 +1,42 @@
 #header {
     background: #fff;
-    padding: 20px 0;
-    height: 100px;
-    border-bottom: 1px solid black;
     width: 100%;
     transition: all .3s ease;
-    h1{
-        padding-bottom: 50px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    h1 {
+        color: #666666;
+        font-size: 12px;
+        position: absolute;
+        top: 5px;
+        left: 97px;
+        letter-spacing: 0.4px;
     }
 
-    // &.--fix{
-    //     position: fixed;
-    //     top: 0;
-    // }
+    &.--fix{
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: .16);
+    }
 }
 
-.header-main{
+.header-main {
     display: flex;
     align-content: center;
     justify-content: space-between;
-}
-
-.header-act{
-    display: flex;
-    align-items: center;
+    position: relative;
 }
 
 .menu-list {
     position: relative;
     display: flex;
-    column-gap: 25px;
+    align-items: center;
+    height: 100%;
+    column-gap: 60px;
+    letter-spacing: 1px;
 
     // style chung
     a {
@@ -43,13 +50,13 @@
     // active level 1
     .--active {
         a {
-            color: #1a2542;
+            color: $main-cl;
         }
 
         // active level 2
         .--active {
             >a {
-                background-color: #1a2542;
+                background-color: $main-cl;
                 color: white;
             }
         }
@@ -58,24 +65,45 @@
 
 .dropdown {
     position: relative;
+
     .dropdown {
         &:hover {
             >a {
-                background-color: #1a2542;
+                background-color: $main-cl;
                 color: white;
             }
         }
     }
+
+    span {
+        padding: 10px 14px 12px 0;
+        padding-right: 14px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url('../images/svg/arrow-down.svg');
+            background-size: cover;
+            width: 8px;
+            height: 4px;
+            transition: all 0.3s;
+        }
+    }
+
+   
 }
 
 .sub-menu {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 12px);
     left: 0;
     width: 100%;
-    min-width: 200px;
-    // font-size: 12px;
-    background-color: white;
+    min-width: 120px;
+    background-color: #f2f2f2;
+
     // box-shadow: 10px 10px 30px rgba($color: black, $alpha: 0.16);
 
     .sub-menu {
@@ -83,9 +111,66 @@
         left: 100%;
     }
 
-    a , span {
-        padding: 15px;
+    li {
+        border-bottom: 1px solid #fff;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &.sbm{
+        .mu-tam{
+            padding-left: 10px;
+            letter-spacing: -1px;
+        }
+
+        .mu-email{
+            padding-left: 6px;
+            letter-spacing: -2px;
+        }
+    }
+
+    .mu-tam{
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 3px 0 3px 6px;
+            border-color: transparent transparent transparent #333333;
+            margin-right: 5px;
+            transform: translateY(-2px);
+            transition: all .3s ease;
+        }
+    }
+
+    .mu-email{
+        &::before {
+            content: '';
+            display: inline-block;
+            background-image: url('../../images/svg/ic-email.svg');
+            background-size: cover;
+            width: 12px;
+            height: 8px;
+            margin-right: 6px;
+            transform: translateY(-1px);
+            transition: all .3s ease;
+        }
+    }
+
+    a,
+    span {
+        padding: 11px 6px 12px 14px;
         display: block;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    a {
+        letter-spacing: 0;
+        position: relative;
+
     }
 }
-

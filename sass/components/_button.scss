@@ -33,12 +33,14 @@
 // }
 
 .hamburger-btn {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     position: relative;
     cursor: pointer;
-    display: none;
     z-index: 99;
+    // background-color: $main-cl;
+    border-radius: 100%;
+    transition: all .3s ease;
 
     .bar {
         width: 30px;
@@ -87,17 +89,153 @@
             }
         }
     }
+
+    &.ham-off{
+        .ham-bg{
+            animation:  header-off0 375ms ease-in-out forwards;
+        }
+        .ham-hv{
+            div{
+                &:nth-child(1){
+                    animation: header-off1 .75s ease-in-out forwards;
+                    span{
+                        span {
+                            animation: header-button-off0 2.5s ease-in-out 0s infinite;
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    span{
+                        span {
+                            animation: header-button-off0 2.5s ease-in-out .15s infinite;
+                        }
+                    }
+                }
+                &:nth-child(3){
+                    animation: header-off2 .75s ease-in-out forwards;
+                    span{
+                        span {
+                            animation: header-button-off0 2.5s ease-in-out .3s infinite;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ham-bg{
+        @include pos-full;
+        background-color:$main-cl;
+        border-radius: 100%;
+        transition: all .3s ease;
+    }
+
+    .ham-hv {
+        display: block;
+        width: 34px;
+        height: 18px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -9px 0 0 -17px;
+        animation: fadeIn 375ms ease-in-out .1875s forwards;
+        opacity: 0;
+        div {
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+            &:nth-child(2) {
+                margin: 8px 0 0;
+            }
+
+            &:nth-child(3) {
+                margin: 16px 0 0;
+            }
+
+            span {
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+
+                span {
+                    background: rgba(255, 255, 255, 1);
+                    transition-duration: 375ms;
+                    transition-timing-function: ease-in-out;
+                }
+            }
+
+            >span {
+                background-color: rgba($color: $main-cl, $alpha: 0);
+                // transition: all .4s ease;
+            }
+        }
+    }
+
+    &:hover{
+        .ham-hv{
+            div{
+                &:nth-child(2){
+                    >span{
+                        left: 25%;
+                    }
+                }
+            }
+        }
+    }
+
+    &.ham-on {
+        .ham-bg{
+            animation: header-on0 375ms ease-in-out forwards;
+        }
+        
+        .ham-hv{
+            opacity: 0;
+            div{
+                >span{
+                    background-color: $main-cl;
+                }
+                span{
+                    span{
+                        background-color: rgba($color: #fff, $alpha: 0);
+                    }
+                }
+
+                &:nth-child(1){
+                    animation: header-on1 .75s ease-in-out forwards;
+                }
+
+                &:nth-child(2){
+                    opacity: 0;
+                }
+
+                &:nth-child(3){
+                    animation: header-on2 .75s ease-in-out forwards;
+                }
+            }
+        }
+    }
+    
+
 }
 
 .scroll-top {
     position: fixed;
     bottom: 40px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: $main-cl;
-    border: 1px $main-cl solid;
-    border-radius: 4px;
+    right: 196px;
+    width: 45px;
+    height: 45px;
+    background-color: #f2db55;
+    border-radius: 100%;
     cursor: pointer;
     z-index: 98;
     overflow: hidden;
@@ -108,21 +246,17 @@
         @include visible();
     }
 
-    &::before{
+    &::before {
         content: "";
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: url('../images/ic-scrolltop.png') center no-repeat;
-        width: 30px;
-        height: 30px;
+        background: url('../images/svg/ic-scrolltop.svg') center no-repeat;
+        width: 16px;
+        height: 10px;
         filter: brightness(0) invert(1);
         transform: translate(-50%, -50%);
         transition: all 0.3s ease;
-    }
-
-    &:hover {
-        opacity: .8;
     }
 }

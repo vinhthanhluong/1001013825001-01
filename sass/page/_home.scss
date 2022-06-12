@@ -1,44 +1,4 @@
-
-
-.text-aos{
-    margin-top: 1000px;
-    font-size: 30px;
-    color: blue;
-    position: relative;
-    transition: all .3s ease;
-    font-weight: bold;
-    letter-spacing: 5px;
-    color: $w-cl;
-    color: red;
-
-    &::before{
-        content: '';
-        @include pos-full;
-        background-color: blueviolet;
-        transition: all 1.2s ease;
-        right: 0;
-        left: unset;
-    }
-    
-    &.aos-animate{
-        color: red;
-        &::before{
-            width: 0;
-        }
-    }
-
-    &2{
-        margin-top: 1000px;
-    }
-
-    &3{
-        margin-top: 1000px;
-    }
-}
-
-#header{
-    h1{
-        font-size: 16px;
-        padding-bottom: 0;
-    }
+#main{
+    margin-top: 80px;
+    height: 1000px;
 }
