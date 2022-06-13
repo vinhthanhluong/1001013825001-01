@@ -28,20 +28,20 @@
 
     <script type="application/ld+json">
     {
-      "@context" : "https://schema.org/",
-      "@type" : "LocalBusiness",
-      "name" : "ƒ\ƒjƒbƒN Š”Ž®‰ïŽÐ",
-      "image" : "https://www.sonic21.co.jp/images/logo_img01.jpg",
-      "telephone" : "0267-25-7020",
-      "address" : 
+        "@context" : "https://schema.org/",
+        "@type" : "LocalBusiness",
+        "name" : "ソニック 株式会社",
+        "image" : "https://www.sonic21.co.jp/images/logo.png",
+        "telephone" : "0267-25-7020",
+        "address" : 
         {
             "@type" : "PostalAddress",
-            "streetAddress" : "‘åŽš”–Ø436-86",
-            "addressLocality" : "¬”Žs",
-            "addressRegion" : "’·–ìŒ§",
+            "streetAddress" : "大字柏木436-86",
+            "addressLocality" : "小諸市",
+            "addressRegion" : "長野県",
             "postalCode" : "384-0055"
         },
-    "openingHoursSpecification": 
+        "openingHoursSpecification": 
         [
             {
                 "@type": "OpeningHoursSpecification",
@@ -51,8 +51,53 @@
             }
         ]
     }
-    
-</script>
+    </script>
+
+    <script type="application/ld+json">
+	{
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": 
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {	
+                    "@id": "https://www.sonic21.co.jp/",
+                    "name": "液晶パネル・半導体の設計・開発・組立・据付ならソニック株式会社"
+                }
+            }
+        ]
+	}
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context" : "https://schema.org",
+            "@type" : "LocalBusiness",
+            "name" : "ソニック 株式会社",
+            "founder":"",
+            "foundingDate":"0000-00-00", //設立日
+            "description" : "液晶パネル・半導体製造の長野県小諸市「ソニック株式会社」は、設計・開発・製造・組立・据付までをワンストップで手がけています。本社工場にはクリーンルームを擁し、高精度の産業機械・装置の生産を多種少量で行っています。",
+            "url" : "https://www.sonic21.co.jp",
+            "logo": "https://www.sonic21.co.jp/images/logo.png",
+            "telephone" : "0267-25-7020", //電話番号
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "大字柏木436-86",
+                "addressLocality": "小諸市",
+                "addressRegion": "長野県",
+                "postalCode": "384-0055",
+                "addressCountry": "JP"
+            },
+            "contactPoint" :[{
+                "@type" : "ContactPoint",
+                "telephone" : "0267-25-7020",
+                "contactType" : "customer service"
+            }],
+            "sameAs":[ //関連サイトやSNS]
+        }
+    </script>
 
 </head>
 
@@ -64,19 +109,19 @@
                 <div class="header-main">
                     <h1>h1が入りますh1が入りますh1が入ります </h1>
                     <div class="logo">
-                        <a href="#">
-                            <img src="./images/logo.png" alt="logo.png">
+                        <a href="https://www.sonic21.co.jp/">
+                            <img src="./images/logo.png" loading="lazy" width="275" height="47" alt="ソニック株式会社">
                         </a>
                     </div>
                     <div class="header-menu">
                         <ul class="menu-list">
                             <li>
-                                <a href="#">
+                                <a href="company/index.html">
                                     ソニックが選ばれている理由
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="company/index.html">
                                     事業紹介・製品紹介
                                 </a>
                             </li>
@@ -86,29 +131,29 @@
                                 </span>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="#" class="mu-tam">会社概要</a>
+                                        <a href="company/about.html" class="mu-tam">会社概要</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="mu-email">お問い合わせ </a>
+                                        <a href="contact/" class="mu-email">お問い合わせ </a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li class="dropdown">
-                                <span href="#">
+                                <span>
                                     採用情報
                                 </span>
                                 <ul class="sub-menu sbm">
                                     <li>
-                                        <a href="#" class="mu-tam">先輩インタビュー</a>
+                                        <a href="recruit/index.html" class="mu-tam">先輩インタビュー</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="mu-email">エントリーフォーム</a>
+                                        <a href="recruit/entry/" class="mu-email">エントリーフォーム</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="news/">
                                     NEWS
                                 </a>
                             </li>
@@ -130,23 +175,233 @@
         <!-- end #header-->
         <main id="main">
             <div id="mainvisual">
-
-            </div>
-            <div id="content">
-                <section class="html-demo">
-                    <div class="container">
-                        <div id="text01" class="text-aos text-aos1" data-aos="text-1">
-                            texttttttttttttttttt
+                <div class="container">
+                    <div class="visual-wrapper">
+                        <div class="visual-head">
+                            <h2 class="visual-title">
+                                <span class="main-cl">“新しい明日”</span> <span class="fs-small">をつくる</span><br>
+                                <span class="vis-tb">モノづくり</span>
+                            </h2>
+                            <p class="visual-label">
+                                産業機械のアウトソーシングをクリーンに｡
+                            </p>
+                        </div>
+                        <div class="visual-slick" id="visual">
+                            <div class="visual-slider">
+                                <div class="visual-img">
+                                    <div class="vis-ig"></div>
+                                    <p>事業内容</p>
+                                </div>
+                            </div>
+                            <div class="visual-slider">
+                                <div class="visual-img">
+                                    <div class="vis-ig"></div>
+                                    <p>事業内容2</p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="text-aos text-aos2" data-aos="text-2">
-                            22222222222222222
-                        </div>
-
-                        <div class="text-aos text-aos3" data-aos="text-3">
-                            3333333333333333
+                        <div class="visual-contact">
+                            <div class="v-contact-wrap">
+                                <p class="vis-cont-tt">
+                                    お問い合わせ
+                                </p>
+                                <a href="tel:0267257020" class="vis-tell"
+                                    onclick="gtag('event', 'tel', {'event_category': 'sp'})">0267-25-7020</a>
+                                <a href="#" class="vis-lk">
+                                    お問い合わせ
+                                </a>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div id="content">
+                <section class="sonic">
+                    <div class="container">
+                        <div class="sonic-wrapper">
+                            <div class="sonic-asd">
+                                <div class="sonic-sld">
+                                    <ul class="sonic-slider" id="sonic-slick">
+                                        <li class="sonic-box">
+                                            <img src="./images/sonic-img01.jpg" loading="lazy" width="440" height="350"
+                                                alt="ソニック株式について">
+                                        </li>
+                                        <li class="sonic-box">
+                                            <img src="./images/sonic-img02.jpg" loading="lazy" width="440" height="350"
+                                                alt="ソニック株式について">
+                                        </li>
+                                        <li class="sonic-box">
+                                            <img src="./images/sonic-img03.jpg" loading="lazy" width="440" height="350"
+                                                alt="ソニック株式について">
+                                        </li>
+                                        <li class="sonic-box">
+                                            <img src="./images/sonic-img02.jpg" loading="lazy" width="440" height="350"
+                                                alt="ソニック株式について">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sonic-txt">
+                                <h3 class="sonic-title">
+                                    <span class="sonic-sm">
+                                        About
+                                    </span>
+                                    <span class="sonic-bg">
+                                        sonic
+                                    </span>
+                                </h3>
+
+                                <div class="sonic-text">
+                                    <p class="sonic-tt">
+                                        ソニック株式について
+                                    </p>
+
+                                    <p class="sonic-label">
+                                        液晶パネル、半導体などのオーダー対応
+                                    </p>
+
+                                    <p class="sonic-desc">
+                                        平成2年に印刷機周辺装置の製造からスタートしたソニックは、長野県小諸市を本拠地として30年以上に渡って経験とノウハウを蓄積してまいりました。技術力を磨き・高めた結果、現在は多種多様な精密機械・産業機械の製造を手がけています。関連企業様・工場様との連携を深め、県内最大規模とも言われる強力なネットワークも構築。ソニックの現在の企業情報、これまでの歩みをご紹介する沿革、アクセスなどをご案内いたします。
+                                    </p>
+
+                                    <a href="#" class="btn btn-g sonic-lk">
+                                        <span> 会社概要</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="business">
+                    <div class="business-wrapper">
+                        <div class="line"></div>
+                        <div class="busi-info">
+                            <h3 class="busi-title">
+                                <span class="busi-en">business</span>
+                                <span class="busi-jp">
+                                    事業・製品紹介
+                                </span>
+                            </h3>
+                            <p class="busi-desc">
+                                ソニックの事業の中心は、液晶パネルや半導体などの精密機器、産業機械・工作機械の製造です。当社の設計・開発部門や製造部門の技術力により、幅広い製品をご提供しております。お客様のオーダーニーズや、さまざまな状況に柔軟に対応できることが当社事業の特色です。
+                            </p>
+                            <a href="#" class="btn btn-w">
+                                <span>詳しくはこちら</span>
+                            </a>
+                        </div>
+                        <div class="busi-txt">
+                            <div class="busi-list">
+                                <dl class="busi-item">
+                                    <dt>
+                                        <span class="busi-tt">設計・開発部門</span>
+                                        <span class="busi-icon"></span>
+                                    </dt>
+                                    <dd>
+                                        設計・開発部門では、製造受託に対応するだけでなく当社のノウハウを活用して、お客様の設計開発業務の支援を行っています。デザインレビューから設計検証・試作検証・設計の妥当性確認・量産移行まで、お客様のお悩みを適切に把握し、しっかりとカバーする内容をご提案いたします。
+                                    </dd>
+                                    <a href="#" class="lk-full"></a>
+                                </dl>
+                                <dl class="busi-item">
+                                    <dt>
+                                        <span class="busi-tt">製造部門</span>
+                                        <span class="busi-icon"></span>
+                                    </dt>
+                                    <dd>
+                                        製造部門は、実績に裏付けされた高い技術力で、高度な機械組立に対応しています。当社が主力とするのは、液晶パネルや半導体製造装置、高精度の産業機械・工作機械・機械装置など、ハイレベルの製品製造です。確かな品質管理によって、お客様にご満足いただける製品をご提供しています。
+                                    </dd>
+                                    <a href="#" class="lk-full"></a>
+                                </dl>
+                                <dl class="busi-item">
+                                    <dt>
+                                        <span class="busi-tt">製品紹介</span>
+                                        <span class="busi-icon"></span>
+                                    </dt>
+                                    <dd>
+                                        ソニックが提供している一部製品をご紹介します。ソニックではお客様のご要望に応じた機械製作が可能ですので、こちらにない機械・設備のご依頼にもしっかりとお応えすることができます。機械製作のお悩みは、ぜひ当社までお問い合わせください。
+                                    </dd>
+                                    <a href="#" class="lk-full"></a>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="feature">
+
+                    <p class="feat-bf">
+                        sonic
+                    </p>
+
+                    <div class="feature-wrap">
+                        <h3 class="feat-head">
+                            <span class="feat-en">
+                                feature
+                            </span>
+                            <span class="feat-jp">
+                                ソニックが選ばれている理由
+                            </span>
+                        </h3>
+
+                        <div class="feat-wrp">
+                            <div class="feat-img">
+                                <img src="./images/feature-img01.jpg" loading="lazy" width="1320" height="600"
+                                    alt="開発、設計、組立、据付まで対応が可能">
+                            </div>
+                            <div class="feat-text">
+                                <p class="feat-tt">
+                                    開発、設計、組立、据付まで対応が可能
+                                </p>
+                                <div class="feat-desc">
+                                    当社へ機械製作についてのご相談をいただくと、企画・開発・設計・製造・組立・据付まで、一貫した対応が可能です。自社の高度な技術力やノウハウを駆使するほか、不足する部分については、臨機応変に協力パートナーと連携して進めてまいります。
+                                    産業機械・精密機械の製造をアウトソーシングしたい、クリーンルームで精密機器を製造してほしい、機械の設計・製造について相談したい、OEMで作ってほしいなど、どんなことでもお任せください。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="feature-wrap2">
+                            <div class="feat-box">
+                                <div class="feat-col feat-ts">
+                                    <p class="feat-tt2">
+                                        <span class="feat-ic"></span>
+                                        <span class="feat-t">
+                                            クリーンルームを保有、<br>
+                                            精密機器の製造が可能
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="feat-col feat-tx">
+                                    <p class="feat-dsc">
+                                        当社へご依頼いただく企業様が着目するポイントの一つが、クリーンルームでの機器製作です。<br>
+                                        空気中に漂う、目に見えない浮遊微小粒子（微細なホコリ）や浮遊微生物（細菌等）は、精密機器を製造する場面では決して許されません。当社のクリーンルームは液晶パネルや半導体製造はもちろんのこと、さまざまな機械製作・加工で使用しており、お客様のニーズに応じて適切に活用することができます。
+                                    </p>
+                                </div>
+                                <a href="#" class="lk-full"></a>
+                            </div>
+                            <div class="feat-box feat-box2">
+                                <div class="feat-col feat-tx">
+                                    <p class="feat-dsc">
+                                        ソニック株式会社では、機械製作に関する専門的な知識、高い技術力と豊富な経験を培ってまいりました。さらに、機械製作に欠かせない専門的な設備も適宜導入しています。仕様や図面、工程に忠実に製作することはもちろん、それだけにとどまらない高精度な製品をご提供いたします。
+                                    </p>
+                                </div>
+                                <div class="feat-col feat-ts">
+                                    <p class="feat-tt2">
+                                        <span class="feat-ic"></span>
+                                        <span class="feat-t">
+                                            高精度の産業機械・工作機械 <br>
+                                            ・機械装置の対応が可能
+                                        </span>
+                                    </p>
+                                </div>
+                                <a href="#" class="lk-full"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </section>
             </div>
         </main>
@@ -158,8 +413,9 @@
                         <div class="cols">
                             <div class="col">
                                 <div class="ft-info">
-                                    <a href="#" class="ft-logo">
-                                        <img src="./images/logo-ft.png" alt="logo-ft">
+                                    <a href="https://www.sonic21.co.jp/" class="ft-logo">
+                                        <img src="./images/logo-ft.png" loading="lazy" width="380" height="59"
+                                            alt="ソニック株式会社">
                                     </a>
                                     <ul class="ft-lst">
                                         <li>
@@ -180,22 +436,22 @@
                                     </p>
                                     <ul class="ft-list">
                                         <li>
-                                            <a href="#">
+                                            <a href="company/index.html">
                                                 -事業紹介
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="company/about.html">
                                                 -会社概要
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="news/">
                                                 -NEWS
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="contact/">
                                                 お問い合わせ
                                             </a>
                                         </li>
@@ -209,17 +465,17 @@
                                     </p>
                                     <ul class="ft-list">
                                         <li>
-                                            <a href="#">
+                                            <a href="recruit/entry/">
                                                 -採用情報
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="recruit/index.html">
                                                 -先輩社員
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="recruit/entry">
                                                 エントリー
                                             </a>
                                         </li>

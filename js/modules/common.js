@@ -17,7 +17,6 @@ $(function () {
             this.toTop();
             this.anchorLink();
             // this.scrollToMail();
-            // this.visual();
             this.matchHeight();
             this.menu();
             // this.accordion();
@@ -94,81 +93,63 @@ $(function () {
             }
         },
 
-        visual: function () {
-            if ($('#visual').length > 0) {
-                $('#visual').slick({
-                    dots: false,
-                    infinite: true,
-                    speed: 1000,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 5000,
-                    arrows: false,
-                    centerMode: false,
-                    centerPadding: 0,
-                    pauseOnHover: false,
-                    fade: false,
-                    variableWidth: false,
-                });
-            }
-        },
+        
 
-        matchHeight: function () {
-            // $('.asddd').matchHeight();
-        },
+matchHeight: function () {
+    // $('.asddd').matchHeight();
+},
 
-        menu: function () {
-            $('.hamburger-btn').click(function () {
-                // $(this).toggleClass('--active');
-                $('body').toggleClass('open-nav no-scroll');
-                if ($(this).hasClass('ham-on')) {
-                    $(this).removeClass('ham-on');
-                    $(this).addClass('ham-off');
-                }else if ($(this).hasClass('ham-off')) {
-                    $(this).removeClass('ham-off');
-                    $(this).addClass('ham-on');
-                }
-            });
+menu: function () {
+    $('.hamburger-btn').click(function () {
+        // $(this).toggleClass('--active');
+        $('body').toggleClass('open-nav no-scroll');
+        if ($(this).hasClass('ham-on')) {
+            $(this).removeClass('ham-on');
+            $(this).addClass('ham-off');
+        } else if ($(this).hasClass('ham-off')) {
+            $(this).removeClass('ham-off');
+            $(this).addClass('ham-on');
+        }
+    });
 
-            // $('.overplay').click(function () {
-            //     $('.hamburger-btn').trigger('click');
-            // });
+    // $('.overplay').click(function () {
+    //     $('.hamburger-btn').trigger('click');
+    // });
 
-            if ($('.header-menu').length) {
-                const _w = $(window).width();
-                if (_w < 751) {
-                    $('.dropdown > span').click(function () {
-                        $(this).toggleClass('open');
-                        $(this).next('.sub-menu').stop().slideToggle();
-                        $(this).closest('.dropdown').siblings().find('.sub-menu').stop().slideUp();
-                        $(this).closest('.dropdown').siblings().find('span').removeClass('open');
-                    });
-                }
-            }
-
-            $(window).scroll(function () { 
-               var st = $(window).scrollTop();
-                if (st > 10) {
-                    $('#header').addClass('--fix');
-                }else{
-                    $('#header').removeClass('--fix');
-                }
-            });
-        },
-
-        //Accordion
-        accordion: function () {
-            $(".accordion-button").click(function (e) {
-                e.preventDefault();
-                $(this).toggleClass("open");
-                var _accordionID = $(this).attr('id');
-                var accordion_content = $('[data-accordion-for="' + accordionID + '"]');
-                accordion_content.stop().slideToggle(200);
+    if ($('.header-menu').length) {
+        const _w = $(window).width();
+        if (_w < 751) {
+            $('.dropdown > span').click(function () {
+                $(this).toggleClass('open');
+                $(this).next('.sub-menu').stop().slideToggle();
+                $(this).closest('.dropdown').siblings().find('.sub-menu').stop().slideUp();
+                $(this).closest('.dropdown').siblings().find('span').removeClass('open');
             });
         }
+    }
+
+    $(window).scroll(function () {
+        var st = $(window).scrollTop();
+        if (st > 10) {
+            $('#header').addClass('--fix');
+        } else {
+            $('#header').removeClass('--fix');
+        }
+    });
+},
+
+//Accordion
+accordion: function () {
+    $(".accordion-button").click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass("open");
+        var _accordionID = $(this).attr('id');
+        var accordion_content = $('[data-accordion-for="' + accordionID + '"]');
+        accordion_content.stop().slideToggle(200);
+    });
+}
 
     }
 
-    obj.init();
+obj.init();
 });

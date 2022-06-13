@@ -3,6 +3,12 @@
 @import "./core/mixins";
 @import "./core/animation";
 
+@include min-media(1281px){
+    .index #mainvisual .visual-contact{
+        right: calc((100vw - 1440px) / -2);
+    }
+}
+
 @include min-media(751px) {
     .sp {
         display: none !important;

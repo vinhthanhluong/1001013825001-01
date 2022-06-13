@@ -32,6 +32,79 @@
 //     }
 // }
 
+.btn{
+    width: 220px;
+    height: 60px;
+    border: 2px solid transparent;
+    background-color: #fff;
+    @include flex-mid;
+    position: relative;
+    transition: all .3s ease;
+    span{
+        font-size: 18px;
+        transition: all .3s ease;
+    }
+
+    &::after{
+        content: '';
+        width: 18px;
+        height: 8px;
+        background-image: url('../images/ic-right.png');
+        background-size: cover;
+        transition: all .3s ease;
+        position: absolute;
+        top: 50%;
+        right: 7px;
+        transform: translateY(-50%);
+        transition: all .3s ease;
+    }
+
+    &:hover{
+        &::after{
+            right: 3px;
+        }
+    }
+
+    &.btn-g{
+        border-color: $main-cl;
+        span{
+            color: $main-cl;
+        }
+        &:hover{
+            background-color: $main-cl;
+            span{
+                color: #fff;
+            }
+            &::after{
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+
+    &.btn-w{
+        border-color: #fff;
+        background-color: transparent;
+        span{
+            color: #fff;
+        }
+
+        &::after{
+            filter:brightness(0) invert(1);
+        }
+
+        &:hover{
+            background-color: #fff;
+            span{
+                color: $main-cl;
+            }
+
+            &::after{
+                filter: none;
+            }
+        }
+    }
+}
+
 .hamburger-btn {
     width: 70px;
     height: 70px;
@@ -41,7 +114,8 @@
     // background-color: $main-cl;
     border-radius: 100%;
     transition: all .3s ease;
-
+    display: none;
+    
     .bar {
         width: 30px;
         height: 3px;
@@ -249,7 +323,7 @@
     &::before {
         content: "";
         position: absolute;
-        top: 50%;
+        top: 47%;
         left: 50%;
         transform: translate(-50%, -50%);
         background: url('../images/svg/ic-scrolltop.svg') center no-repeat;
