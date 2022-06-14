@@ -521,6 +521,22 @@ p:last-child {
     opacity: 1;
   }
 }
+@keyframes home-loader-off0 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes home-loader-on0 {
+  0% {
+    stroke-dasharray: 0 300%;
+  }
+  100% {
+    stroke-dasharray: 190% 300%;
+  }
+}
 .tt-14 {
   font-size: 14px;
 }
@@ -1324,6 +1340,9 @@ p:last-child {
 .index #mainvisual .slick-dots li.slick-active {
   display: block;
 }
+.index #mainvisual .slick-dots li.slick-active .pagi-number svg circle {
+  animation: home-loader-on0 6s linear forwards;
+}
 .index #mainvisual .visual-pagi {
   display: flex;
 }
@@ -1331,6 +1350,24 @@ p:last-child {
   font-family: "Josefin Sans";
   font-size: 72px;
   line-height: 1;
+  position: relative;
+}
+.index #mainvisual .pagi-number svg {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  transform: translate(-56%, -13%);
+}
+.index #mainvisual .pagi-number svg circle {
+  fill: transparent;
+  stroke-width: 10;
+  stroke-dasharray: 190% 300%;
+}
+.index #mainvisual .recruit-circle {
+  stroke: #37a168;
+  background: transparent;
 }
 .index #mainvisual .pagi-tt {
   padding: 0 0 0 19px;
@@ -1813,6 +1850,248 @@ p:last-child {
 }
 .feature .feat-box2 .feat-t {
   line-height: 2;
+}
+
+.recruit {
+  max-width: 1920px;
+  margin: 110px auto 200px;
+}
+.recruit .recruit-wrapper {
+  position: relative;
+}
+.recruit .rec-ig {
+  position: relative;
+  float: right;
+  z-index: 0;
+}
+.recruit .rec-ig::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -70px;
+  width: 100%;
+  height: 100%;
+  background-color: #f2db55;
+  z-index: -1;
+}
+.recruit .rec-txt {
+  padding: 89px 60px 85px 115px;
+  width: 720px;
+  height: 763px;
+  background-color: #fff;
+  position: absolute;
+  top: 122px;
+  left: calc((100vw - 1440px) / 2);
+}
+.recruit .rec-title {
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+.recruit .rec-title span {
+  display: block;
+}
+.recruit .rec-title .rec-en {
+  font-size: 60px;
+  margin-bottom: 19px;
+  position: relative;
+  letter-spacing: 1px;
+  color: #f2db55;
+}
+.recruit .rec-title .rec-jp {
+  font-size: 19px;
+  font-weight: bold;
+  padding-left: 5px;
+}
+.recruit .rec-label {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 28px;
+  padding-left: 10px;
+}
+.recruit .rec-desc {
+  line-height: 2;
+  letter-spacing: 0.3px;
+  margin-bottom: 88px;
+  padding-left: 6px;
+}
+.recruit .rec-list {
+  margin: -30px -20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 5px;
+  transform: translateX(7px);
+}
+.recruit .rec-list li {
+  width: 50%;
+  padding: 15px 20px;
+}
+.recruit .rec-list a {
+  position: relative;
+  display: flex;
+  border: 2px solid #f2db55;
+  background-color: #fff;
+  height: 60px;
+}
+.recruit .rec-list a:hover .rec-num {
+  background-color: #fff;
+  color: #f2db55;
+}
+.recruit .rec-list a:hover .rec-tt {
+  background-color: #f2db55;
+  color: #fff;
+}
+.recruit .rec-list a:hover .rec-tt::after {
+  filter: brightness(0) invert(1);
+  right: 10px;
+}
+.recruit .rec-num {
+  flex-shrink: 0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.18);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2db55;
+  width: 46px;
+  transition: all 0.3s ease;
+}
+.recruit .rec-tt {
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 46px 0 10px;
+  transition: all 0.3s ease;
+}
+.recruit .rec-tt::after {
+  content: "";
+  width: 18px;
+  height: 8px;
+  background: url("../images/ic-right-y.png");
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.information {
+  padding: 90px 0 131px;
+  border-top: 5px solid #37a168;
+}
+.information .imn-wrapper {
+  width: 1168px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.information .col {
+  width: 50%;
+}
+.information .col:nth-child(1) {
+  position: relative;
+}
+.information .col:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 1px;
+  height: 106%;
+  border-right: 1px solid #37a168;
+}
+.information .col:nth-child(1) .imn-title {
+  margin-bottom: 40px;
+}
+.information .col:nth-child(2) .imn-title {
+  margin-bottom: 52px;
+}
+.information .imn-box {
+  text-align: center;
+}
+.information .imn-title span {
+  display: block;
+}
+.information .imn-en {
+  font-size: 60px;
+  color: #37a168;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-family: "Josefin Sans";
+  line-height: 1;
+}
+.information .imn-jp {
+  font-size: 18px;
+  font-weight: bold;
+}
+.information .imn-tell {
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+  display: block;
+  margin-bottom: 56px;
+}
+.information .imn-tell::before {
+  content: "";
+  background: url("../images/svg/ic-tell.svg") center no-repeat;
+  background-size: cover;
+  width: 18px;
+  height: 25px;
+  display: inline-block;
+  margin-right: 15px;
+}
+.information .imn-contact {
+  width: 220px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: #37a168;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid #37a168;
+}
+.information .imn-contact span {
+  font-size: 18px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.information .imn-contact:hover {
+  background-color: #fff;
+}
+.information .imn-contact:hover span {
+  color: #37a168;
+}
+.information .imn-contact:hover::before {
+  filter: none;
+}
+.information .imn-contact::before {
+  content: "";
+  display: inline-block;
+  background: url("../images/ic-email3.png") center no-repeat;
+  background-size: cover;
+  margin-right: 15px;
+  width: 20px;
+  height: 14px;
+  filter: brightness(0) invert(1);
+}
+.information .imn-item {
+  margin-bottom: 57px;
+}
+.information .imn-date {
+  margin-bottom: 13px;
+}
+.information .imn-tt {
+  letter-spacing: 0;
+}
+.information .btn {
+  margin: 0 auto;
+  transform: translateX(-2px);
 }
 
 /*============================= HACK CSS =============================*/

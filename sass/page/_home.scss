@@ -121,7 +121,7 @@
             width: 168px;
             height: 40px;
             border-radius: 4px;
-            background-color: #f2db55;
+            background-color: $y-cl;
             font-weight: 500;
             position: relative;
             @include flex-mid;
@@ -197,6 +197,10 @@
                 margin: 0;
                 &.slick-active {
                     display: block;
+
+                    .pagi-number svg circle{
+                        animation: home-loader-on0 6s linear forwards
+                    }
                 }
             }
         }
@@ -208,6 +212,28 @@
             font-family: "Josefin Sans";
             font-size: 72px;
             line-height: 1;
+            position: relative;
+            svg{
+                top: 0;
+                left: 0;
+                position: absolute;
+                width: 170px;
+                height: 170px;
+                transform: translate(-56% , -13%) ;
+
+                circle{
+                    // animation: home-loader-off0 0.5s ease-in-out forwards;
+                    fill: transparent;
+                    stroke-width: 10;
+                    stroke-dasharray: 190% 300%;
+
+                }
+            }
+        }
+
+        .recruit-circle{
+            stroke: $main-cl;
+            background: transparent;
         }
 
         .pagi-tt {
@@ -479,7 +505,7 @@
 
         &:hover {
             .busi-tt {
-                color: #f2db55;
+                color: $y-cl;
             }
 
             .busi-icon {
@@ -551,11 +577,11 @@
         background-color: #efefef;
         position: absolute;
         top: 36.3%;
-        left:0;
+        left: 0;
         z-index: -1;
     }
 
-    .feat-bf{
+    .feat-bf {
         font-size: 70px;
         font-family: "Josefin Sans";
         color: #fff;
@@ -567,8 +593,8 @@
         z-index: 2;
         transform: rotate(-90deg);
 
-        &::before{
-            content: '';
+        &::before {
+            content: "";
             width: 3px;
             height: 704px;
             border-radius: 2px;
@@ -576,10 +602,10 @@
             position: absolute;
             right: 6px;
             top: 98px;
-        } 
+        }
 
-        &::after{
-            content: '';
+        &::after {
+            content: "";
             height: 3px;
             width: 699px;
             border-radius: 0 1px 1px 0;
@@ -588,8 +614,8 @@
             position: absolute;
             top: 36%;
             left: 0;
-            transform: translate(-107% , -50%);
-        } 
+            transform: translate(-107%, -50%);
+        }
     }
 
     .feature-wrap {
@@ -747,5 +773,283 @@
         .feat-t {
             line-height: 2;
         }
+    }
+}
+
+.recruit {
+    max-width: 1920px;
+    margin: 110px auto 200px;
+    .recruit-wrapper {
+        position: relative;
+    }
+
+    .rec-ig {
+        position: relative;
+        float: right;
+        z-index: 0;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -60px;
+            left: -70px;
+            width: 100%;
+            height: 100%;
+            background-color: $y-cl;
+            z-index: -1;
+        }
+    }
+
+    .rec-txt {
+        padding: 89px 60px 85px 115px;
+        width: 720px;
+        height: 763px;
+        background-color: #fff;
+        position: absolute;
+        top: 122px;
+        left: calc((100vw - 1440px) / 2);
+    }
+
+    .rec-title {
+        font-family: "Josefin Sans";
+        text-transform: uppercase;
+        margin-bottom: 26px;
+
+        span {
+            display: block;
+        }
+
+        .rec-en {
+            font-size: 60px;
+            margin-bottom: 19px;
+            position: relative;
+            letter-spacing: 1px;
+            color: $y-cl;
+        }
+
+        .rec-jp {
+            font-size: 19px;
+            font-weight: bold;
+            padding-left: 5px;
+        }
+    }
+
+    .rec-label {
+        font-size: 36px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 28px;
+        padding-left: 10px;
+    }
+
+    .rec-desc {
+        line-height: 2;
+        letter-spacing: 0.3px;
+        margin-bottom: 88px;
+        padding-left: 6px;
+    }
+
+    .rec-list {
+        margin: -30px -20px;
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 5px;
+        transform: translateX(7px);
+        li {
+            width: 50%;
+            padding: 15px 20px;
+        }
+
+        a {
+            position: relative;
+            display: flex;
+            border: 2px solid $y-cl;
+            background-color: #fff;
+            height: 60px;
+
+            &:hover {
+                .rec-num {
+                    background-color: #fff;
+                    color: $y-cl;
+                }
+
+                .rec-tt {
+                    background-color: $y-cl;
+                    color: #fff;
+
+                    &::after {
+                        filter: brightness(0) invert(1);
+                        right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .rec-num {
+        flex-shrink: 0;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.18);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $y-cl;
+        width: 46px;
+        transition: all 0.3s ease;
+    }
+
+    .rec-tt {
+        font-size: 18px;
+        font-weight: bold;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 46px 0 10px;
+        transition: all 0.3s ease;
+
+        &::after {
+            content: "";
+            width: 18px;
+            height: 8px;
+            background: url("../images/ic-right-y.png");
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+.information {
+    padding: 90px 0 131px;
+    border-top: 5px solid $main-cl;
+    .imn-wrapper {
+        width: 1168px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .col {
+        width: 50%;
+
+        &:nth-child(1) {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 15px;
+                right: 0;
+                width: 1px;
+                height: 106%;
+                border-right: 1px solid $main-cl;
+            }
+            .imn-title {
+                margin-bottom: 40px;
+            }
+        }
+
+        &:nth-child(2) {
+            .imn-title {
+                margin-bottom: 52px;
+            }
+        }
+    }
+
+    .imn-box {
+        text-align: center;
+    }
+
+    .imn-title {
+        span {
+            display: block;
+        }
+    }
+
+    .imn-en {
+        font-size: 60px;
+        color: $main-cl;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        font-family: "Josefin Sans";
+        line-height: 1;
+    }
+
+    .imn-jp {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .imn-tell {
+        font-size: 30px;
+        font-weight: 500;
+        position: relative;
+        display: block;
+        margin-bottom: 56px;
+        &::before {
+            content: "";
+            background: url("../images/svg/ic-tell.svg") center no-repeat;
+            background-size: cover;
+            width: 18px;
+            height: 25px;
+            display: inline-block;
+            margin-right: 15px;
+        }
+    }
+
+    .imn-contact {
+        width: 220px;
+        height: 60px;
+        margin: 0 auto;
+        background-color: $main-cl;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        border: 1px solid $main-cl;
+        span {
+            font-size: 18px;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        &:hover {
+            background-color: #fff;
+            span {
+                color: $main-cl;
+            }
+            &::before {
+                filter: none;
+            }
+        }
+
+        &::before {
+            content: "";
+            display: inline-block;
+            background: url("../images/ic-email3.png") center no-repeat;
+            background-size: cover;
+            margin-right: 15px;
+            width: 20px;
+            height: 14px;
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    .imn-item {
+        margin-bottom: 57px;
+    }
+
+    .imn-date {
+        margin-bottom: 13px;
+    }
+
+    .imn-tt {
+        letter-spacing: 0;
+    }
+
+    .btn {
+        margin: 0 auto;
+        transform: translateX(-2px);
     }
 }

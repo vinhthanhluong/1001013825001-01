@@ -46,20 +46,20 @@ $(function () {
 
                     customPaging: function (slick, index) {
                         var targetText = slick.$slides.eq(index).find('.visual-img p').html();
-                        var indexNew = index + 1;
-                        var html = '<div class="visual-pagi">' + 
-                                       '<div class="pagi-line">' +
-                                            '<div class="pagi-line-silde"></div>' +
-                                       '</div>' +
-                                        '<div class="pagi-number">' + 0 + indexNew + '</div>' +
-                                        '<div class="pagi-tt">' + 
-                                            '<span class ="pagi-tt-jp">' + targetText + '</span>' +
-                                            '<span class ="pagi-tt-en"> Business </span>' + 
-                                        '</div>' +
-                                    '</div>'
+
+                        var html = '<div class="visual-pagi">' +
+                            '<div class="pagi-line">' +
+                            '<div class="pagi-line-silde"></div>' +
+                            '</div>' +
+                            '<div class="pagi-number">' + 0 + (index + 1) + '<svg><circle cx="50%" cy="50%" r="75" class="recruit-circle"></circle></svg></div>' +
+                            '<div class="pagi-tt">' +
+                            '<span class ="pagi-tt-jp">' + targetText + '</span>' +
+                            '<span class ="pagi-tt-en"> Business </span>' +
+                            '</div>' +
+                            '</div>'
                         return html;
-                       
-                }
+
+                    }
 
                 });
             }

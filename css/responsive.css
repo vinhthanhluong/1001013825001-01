@@ -165,6 +165,22 @@
     opacity: 1;
   }
 }
+@keyframes home-loader-off0 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes home-loader-on0 {
+  0% {
+    stroke-dasharray: 0 300%;
+  }
+  100% {
+    stroke-dasharray: 190% 300%;
+  }
+}
 @media screen and (min-width: 1281px) {
   .index #mainvisual .visual-contact {
     right: calc((100vw - 1440px) / -2);
