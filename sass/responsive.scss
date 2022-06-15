@@ -3,9 +3,19 @@
 @import "./core/mixins";
 @import "./core/animation";
 
-@include min-media(1281px){
-    .index #mainvisual .visual-contact{
-        right: calc((100vw - 1440px) / -2);
+@include min-media(1921px) {
+    .index {
+        #mainvisual {
+            .visual-contact {
+                right: calc((1920px - 100%) / -2);
+            }
+        }
+    }
+
+    .feature {
+        .feat-text {
+            right: calc((1920px - 1198px) / 2);
+        }
     }
 }
 
@@ -18,13 +28,52 @@
         pointer-events: none;
     }
 
-    .scroll-top{
-        &:hover{
+    .scroll-top {
+        &:hover {
             background-color: $main-cl;
         }
     }
 
     //  ========================== Header ==========================
+    #header {
+        &.--fix {
+            color: #fff;
+            .menu-list {
+                > li {
+                    &:hover {
+                        >a , >span{
+                            color: #333;
+                            &::before{
+                                filter: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .dropdown{
+                span{
+                    &::before{
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+
+            .sub-menu{
+                color: #333;
+                a, span{
+                    &:hover {
+                        color: #fff;
+                        background-color: rgba($color: $main-cl2, $alpha: .6);
+                        &::before {
+                            filter: brightness(0) invert(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .menu-list {
         //level 1
         > li {
@@ -54,11 +103,12 @@
         pointer-events: none;
         @include hidden;
 
-        a , span {
+        a,
+        span {
             &:hover {
                 color: #fff;
                 background-color: $main-cl;
-                &::before{
+                &::before {
                     filter: brightness(0) invert(1);
                 }
             }
@@ -70,95 +120,92 @@
 
 /* end screen-min:751px */
 
-
 @media screen and (min-width: 751px) and (max-width: 1600px) {
     .index {
         #mainvisual {
-            .visual-img{
+            .visual-img {
                 transform: scale(0.8);
                 margin-right: 35px;
                 transform-origin: right;
             }
 
-            .visual-title{
+            .visual-title {
                 font-size: 80px;
             }
 
-            .visual-label{
+            .visual-label {
                 font-size: 26px;
+            }
+
+            .v-contact-wrap {
+                width: 420px;
+            }
+
+            .visual-contact {
+                bottom: 68px;
             }
         }
     }
 
     .business {
-        .busi-list{
-            margin-right: 15px;
-        }
-
-        .busi-txt{
+        .busi-txt {
             padding-left: 30px;
+            padding-right: 15px;
         }
     }
 
     .feature {
-        .feat-bf{
+        .feat-bf {
             left: -60px;
         }
 
-        .feat-img{
+        .feat-img {
             width: 1150px;
-            img{
+            img {
                 height: auto;
             }
         }
     }
 
     .recruit {
-        .rec-txt{
+        .rec-txt {
             width: 640px;
             padding: 85px 60px;
             left: 0;
         }
 
-        .rec-ig{
+        .rec-ig {
             margin-right: -90px;
         }
     }
 }
 
-@media screen and (min-width : 751px) and (max-width: 1280px) {
-    .sonic {
-        .sonic-title::after{
-            width: 640px;
-            left: -40px;
-        }
-    }
-
+@media screen and (min-width: 751px) and (max-width: 1280px) {
     .feature {
-        .feat-bf{
+        .feat-bf {
             font-size: 60px;
-            &::before{
+            &::before {
                 height: 470px;
             }
         }
 
-        .feat-text{
+        .feat-text {
             right: 40px;
         }
     }
 
     .recruit {
-        .rec-txt{
+        .rec-txt {
             width: 600px;
             padding: 60px 40px;
             top: 90px;
         }
-        .rec-desc{
+        .rec-desc {
             margin-bottom: 50px;
         }
 
-        .rec-ig{
-            img{
+        .rec-ig {
+            img {
                 width: 1200px;
                 height: auto;
                 max-width: 100%;
@@ -170,9 +217,27 @@
 
 /* end screen-min:751px && screen-max:1500px */
 
-@include max-media (1440px){
-    .menu-list{
+@include max-media(1920px) {
+    .index {
+        #mainvisual {
+            .visual-contact {
+                // right: calc((100vw - 1440px) / -2);
+            }
+        }
+    }
+}
+
+@include max-media(1440px) {
+    .menu-list {
         column-gap: 30px;
+    }
+
+    .index {
+        #mainvisual {
+            .visual-contact {
+                right: -15px;
+            }
+        }
     }
 }
 
@@ -305,7 +370,8 @@
         display: none;
         padding: 10px 20px;
 
-        a , span{
+        a,
+        span {
             padding: 10px;
             position: relative;
             font-size: 14px;

@@ -46,11 +46,13 @@ p:last-child {
 
 /*=============================G L O B A L=============================*/
 #wrapper {
+    max-width: 1920px;
     min-width: 1280px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0 auto;
 }
 
 .container-full {
@@ -143,4 +145,20 @@ p:last-child {
     -ms-touch-action: none;
     touch-action: none;
     -webkit-overflow-scrolling: auto;
+}
+
+.wow {
+    animation-duration: 2s;
+}
+
+.w30{
+    width: 30%;
+}
+
+.w50{
+    width: 50%;
+}
+
+.w100{
+    width: 100%;
 }

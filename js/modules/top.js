@@ -7,7 +7,7 @@ $(function () {
             this.aos();
             this.visual();
             this.sonic();
-
+            this.rec();
         },
 
         //aos
@@ -16,7 +16,7 @@ $(function () {
                 startEvent: 'DOMContentLoaded',
                 offset: 0,
                 duration: 800,
-                delay: '200',
+                delay: '0',
                 easing: 'ease-in-sine',
                 once: true,
                 mirror: true,
@@ -68,20 +68,39 @@ $(function () {
         },
 
         sonic: function () {
-            // $('#sonic-slick').slick({
-            //     infinite: true,
-            //     speed: 1000,
-            //     slidesToShow: 3,
-            //     slidesToScroll: 1,
-            //     autoplay: true,
-            //     autoplaySpeed: 0,
-            //     speed: 15000,
-            // });
-
             $("#sonic-slick").endlessRiver({
                 'speed' : 50
             });
         },
+        
+        rec: function(){
+            // var offset = $('.recruit .rec-ig').offset();
+            // var top = offset.top;
+
+            // var prev = $('.recruit').prev().find('.container').height();
+
+            // console.log(prev);
+
+            // $(window).scroll(function () { 
+            //     var st = $(window).scrollTop();
+
+            //     if (st >= (top - prev)) {
+            //         $('.recruit').addClass('asd');
+            //     }
+            // });
+
+            var wow = new WOW(
+                {
+                    boxClass: 'wow',      // default
+                    animateClass: 'animated', // default
+                    offset: 0,          // default
+                    mobile:false,
+                    live: false,       // default
+                }
+            )
+            wow.init();
+            
+        }
     }
 
     obj.init();

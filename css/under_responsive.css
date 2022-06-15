@@ -19,6 +19,9 @@
   .under-tbl tr:not(:first-child) th {
     border-top: none;
   }
+  .under-tbl th, .under-tbl td {
+    padding: 15px;
+  }
 
   .tbl-block {
     display: block;
@@ -44,8 +47,49 @@
     min-width: 640px;
   }
 
-  #content {
-    padding: 30px 0 50px;
+  .under .h3 {
+    font-size: 40px;
+  }
+  .under .h4 {
+    font-size: 26px;
+    padding: 18px 0 16px;
+  }
+  .under .h5 {
+    font-size: 20px;
+  }
+  .under .h5::before {
+    margin-right: 10px;
+    width: 18px;
+    height: 4px;
+  }
+
+  .main-under #content {
+    width: 100%;
+    padding: 10px 15px 50px;
+  }
+  .main-under .sech3::before {
+    top: 28px;
+  }
+  .main-under .sech3-head {
+    margin-bottom: 30px;
+  }
+  .main-under .sech3-label {
+    font-size: 16px;
+  }
+  .main-under .sech3-text {
+    flex-wrap: wrap;
+  }
+  .main-under .sech3-text p {
+    transform: none;
+  }
+  .main-under .sech3-img {
+    flex-shrink: 1;
+    width: 100%;
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  .main-under .sech4::before {
+    height: 3px;
   }
 }
 /* end screen-max:750px */

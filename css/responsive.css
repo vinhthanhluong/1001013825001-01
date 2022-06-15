@@ -181,9 +181,29 @@
     stroke-dasharray: 195% 300%;
   }
 }
-@media screen and (min-width: 1281px) {
+@keyframes scale1 {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes ani1 {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@media screen and (min-width: 1921px) {
   .index #mainvisual .visual-contact {
-    right: calc((100vw - 1440px) / -2);
+    right: calc((1920px - 100%) / -2);
+  }
+
+  .feature .feat-text {
+    right: 361px;
   }
 }
 @media screen and (min-width: 751px) {
@@ -197,6 +217,29 @@
 
   .scroll-top:hover {
     background-color: #37a168;
+  }
+
+  #header.--fix {
+    color: #fff;
+  }
+  #header.--fix .menu-list > li:hover > a, #header.--fix .menu-list > li:hover > span {
+    color: #333;
+  }
+  #header.--fix .menu-list > li:hover > a::before, #header.--fix .menu-list > li:hover > span::before {
+    filter: none;
+  }
+  #header.--fix .dropdown span::before {
+    filter: brightness(0) invert(1);
+  }
+  #header.--fix .sub-menu {
+    color: #333;
+  }
+  #header.--fix .sub-menu a:hover, #header.--fix .sub-menu span:hover {
+    color: #fff;
+    background-color: rgba(20, 117, 70, 0.6);
+  }
+  #header.--fix .sub-menu a:hover::before, #header.--fix .sub-menu span:hover::before {
+    filter: brightness(0) invert(1);
   }
 
   .menu-list > li:hover > a,
@@ -219,11 +262,13 @@
     opacity: 0;
     visibility: hidden;
   }
-  .sub-menu a:hover, .sub-menu span:hover {
+  .sub-menu a:hover,
+.sub-menu span:hover {
     color: #fff;
     background-color: #37a168;
   }
-  .sub-menu a:hover::before, .sub-menu span:hover::before {
+  .sub-menu a:hover::before,
+.sub-menu span:hover::before {
     filter: brightness(0) invert(1);
   }
 }
@@ -240,12 +285,16 @@
   .index #mainvisual .visual-label {
     font-size: 26px;
   }
-
-  .business .busi-list {
-    margin-right: 15px;
+  .index #mainvisual .v-contact-wrap {
+    width: 420px;
   }
+  .index #mainvisual .visual-contact {
+    bottom: 68px;
+  }
+
   .business .busi-txt {
     padding-left: 30px;
+    padding-right: 15px;
   }
 
   .feature .feat-bf {
@@ -268,11 +317,6 @@
   }
 }
 @media screen and (min-width: 751px) and (max-width: 1280px) {
-  .sonic .sonic-title::after {
-    width: 640px;
-    left: -40px;
-  }
-
   .feature .feat-bf {
     font-size: 60px;
   }
@@ -304,6 +348,10 @@
 @media screen and (max-width: 1440px) {
   .menu-list {
     column-gap: 30px;
+  }
+
+  .index #mainvisual .visual-contact {
+    right: -15px;
   }
 }
 @media screen and (max-width: 750px) {
@@ -376,7 +424,8 @@
     display: none;
     padding: 10px 20px;
   }
-  .sub-menu a, .sub-menu span {
+  .sub-menu a,
+.sub-menu span {
     padding: 10px;
     position: relative;
     font-size: 14px;
