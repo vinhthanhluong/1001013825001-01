@@ -40,8 +40,7 @@
             color: #fff;
             background-color: $main-cl;
             border-radius: 20px;
-            height: 40px;
-            padding: 5px 21px 5px 28px;
+            padding: 5px 21px 8px 28px;
             font-weight: bold;
             line-height: 1;
             margin-left: 23px;
@@ -176,11 +175,14 @@
             p {
                 display: none;
             }
+            a{
+                display: none;
+            }
         }
 
         .vis-ig {
             @include pos-full;
-            background: url("../../images/visual-top01.jpg") no-repeat;
+            background-repeat: no-repeat;
             background-position: -311px 17px;
             border-radius: 100%;
         }
@@ -198,14 +200,19 @@
                 &.slick-active {
                     display: block;
 
-                    .pagi-number svg circle{
-                        animation: home-loader-on0 6s linear forwards
+                    .pagi-number svg circle {
+                        animation: home-loader-on0 6s linear forwards;
                     }
                 }
             }
         }
         .visual-pagi {
             display: flex;
+            position: relative;
+            transition: all .3s ease;
+            &:hover{
+                color: $main-cl;
+            }
         }
 
         .pagi-number {
@@ -213,25 +220,24 @@
             font-size: 72px;
             line-height: 1;
             position: relative;
-            svg{
+            svg {
                 top: 0;
                 left: 0;
                 position: absolute;
                 width: 170px;
                 height: 170px;
-                transform: translate(-56% , -13%) ;
+                transform: translate(-56%, -13%) rotate(17deg);
 
-                circle{
-                    // animation: home-loader-off0 0.5s ease-in-out forwards;
+                circle {
+                    animation: home-loader-off0 0.5s ease-in-out forwards;
                     fill: transparent;
                     stroke-width: 10;
-                    stroke-dasharray: 190% 300%;
-
+                    stroke-dasharray: 0% 300%;
                 }
             }
         }
 
-        .recruit-circle{
+        .recruit-circle {
             stroke: $main-cl;
             background: transparent;
         }
@@ -275,7 +281,7 @@
             top: 0;
             left: 50%;
             height: 100%;
-            width: 100vw;
+            width: 200vw;
             transform: translate(-50%, 48%);
             background-color: #efefef;
             z-index: -1;
@@ -288,12 +294,15 @@
 
     .sonic-slider {
         margin: -30px;
+        position: relative;
     }
 
     .sonic-box {
         margin: 30px;
+        float: left;
         img {
             border-radius: 2px;
+            height: auto;
         }
     }
 
@@ -306,7 +315,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        margin-top: -40px;
+        margin-top: -70px;
     }
 
     .sonic-title {
@@ -412,7 +421,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 50vw;
+        width: 50%;
         &::before {
             content: "";
             position: absolute;
@@ -596,7 +605,8 @@
         &::before {
             content: "";
             width: 3px;
-            height: 704px;
+            // height: 704px;
+            height: 36.7vw;
             border-radius: 2px;
             background-color: #fff;
             position: absolute;

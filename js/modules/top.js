@@ -34,8 +34,8 @@ $(function () {
                     speed: 1000,
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    // autoplay: true,
-                    // autoplaySpeed: 5000,
+                    autoplay: true,
+                    autoplaySpeed: 5000,
                     arrows: false,
                     centerMode: false,
                     centerPadding: 0,
@@ -46,6 +46,7 @@ $(function () {
 
                     customPaging: function (slick, index) {
                         var targetText = slick.$slides.eq(index).find('.visual-img p').html();
+                        var targetLink = slick.$slides.eq(index).find('.visual-img a').attr('href');
 
                         var html = '<div class="visual-pagi">' +
                             '<div class="pagi-line">' +
@@ -56,6 +57,7 @@ $(function () {
                             '<span class ="pagi-tt-jp">' + targetText + '</span>' +
                             '<span class ="pagi-tt-en"> Business </span>' +
                             '</div>' +
+                            '<a href="' + targetLink + '" class="lk-full"> </a>' +
                             '</div>'
                         return html;
 
@@ -66,14 +68,18 @@ $(function () {
         },
 
         sonic: function () {
-            $('#sonic-slick').slick({
-                infinite: true,
-                speed: 1000,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 0,
-                speed: 15000,
+            // $('#sonic-slick').slick({
+            //     infinite: true,
+            //     speed: 1000,
+            //     slidesToShow: 3,
+            //     slidesToScroll: 1,
+            //     autoplay: true,
+            //     autoplaySpeed: 0,
+            //     speed: 15000,
+            // });
+
+            $("#sonic-slick").endlessRiver({
+                'speed' : 50
             });
         },
     }

@@ -534,7 +534,7 @@ p:last-child {
     stroke-dasharray: 0 300%;
   }
   100% {
-    stroke-dasharray: 190% 300%;
+    stroke-dasharray: 195% 300%;
   }
 }
 .tt-14 {
@@ -944,9 +944,13 @@ p:last-child {
   top: 5px;
   left: 97px;
   letter-spacing: 0.4px;
+  transform: translateX(6px);
 }
 #header.--fix {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+}
+#header .logo {
+  transform: translateX(6px);
 }
 
 .header-main {
@@ -1182,8 +1186,7 @@ p:last-child {
   color: #fff;
   background-color: #37a168;
   border-radius: 20px;
-  height: 40px;
-  padding: 5px 21px 5px 28px;
+  padding: 5px 21px 8px 28px;
   font-weight: bold;
   line-height: 1;
   margin-left: 23px;
@@ -1315,13 +1318,16 @@ p:last-child {
 .index #mainvisual .visual-img p {
   display: none;
 }
+.index #mainvisual .visual-img a {
+  display: none;
+}
 .index #mainvisual .vis-ig {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background: url("../../images/visual-top01.jpg") no-repeat;
+  background-repeat: no-repeat;
   background-position: -311px 17px;
   border-radius: 100%;
 }
@@ -1345,6 +1351,11 @@ p:last-child {
 }
 .index #mainvisual .visual-pagi {
   display: flex;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.index #mainvisual .visual-pagi:hover {
+  color: #37a168;
 }
 .index #mainvisual .pagi-number {
   font-family: "Josefin Sans";
@@ -1358,12 +1369,13 @@ p:last-child {
   position: absolute;
   width: 170px;
   height: 170px;
-  transform: translate(-56%, -13%);
+  transform: translate(-56%, -13%) rotate(17deg);
 }
 .index #mainvisual .pagi-number svg circle {
+  animation: home-loader-off0 0.5s ease-in-out forwards;
   fill: transparent;
   stroke-width: 10;
-  stroke-dasharray: 190% 300%;
+  stroke-dasharray: 0% 300%;
 }
 .index #mainvisual .recruit-circle {
   stroke: #37a168;
@@ -1405,7 +1417,7 @@ p:last-child {
   top: 0;
   left: 50%;
   height: 100%;
-  width: 100vw;
+  width: 200vw;
   transform: translate(-50%, 48%);
   background-color: #efefef;
   z-index: -1;
@@ -1415,12 +1427,15 @@ p:last-child {
 }
 .sonic .sonic-slider {
   margin: -30px;
+  position: relative;
 }
 .sonic .sonic-box {
   margin: 30px;
+  float: left;
 }
 .sonic .sonic-box img {
   border-radius: 2px;
+  height: auto;
 }
 .sonic .sonic-txt {
   width: 1200px;
@@ -1430,7 +1445,7 @@ p:last-child {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-top: -40px;
+  margin-top: -70px;
 }
 .sonic .sonic-title {
   position: relative;
@@ -1527,7 +1542,7 @@ p:last-child {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50vw;
+  width: 50%;
 }
 .business .line::before {
   content: "";
@@ -1694,7 +1709,7 @@ p:last-child {
 .feature .feat-bf::before {
   content: "";
   width: 3px;
-  height: 704px;
+  height: 36.7vw;
   border-radius: 2px;
   background-color: #fff;
   position: absolute;
