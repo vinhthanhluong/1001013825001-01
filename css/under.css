@@ -346,8 +346,8 @@
   transform: translateY(-2px);
 }
 
-.under-tbl.tbl-center td,
 .under-tbl.tbl-center th {
+  vertical-align: middle;
   text-align: center;
 }
 .under-tbl.tbl-fix {
@@ -630,6 +630,7 @@
 }
 .under-anc a {
   background: #37a168;
+  color: #fff;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -645,36 +646,28 @@
   padding: 10px;
   line-height: 1.2;
   text-align: center;
-}
-.under-anc a::before {
-  content: "";
-  position: absolute;
-  left: 4px;
-  right: 4px;
-  top: 4px;
-  bottom: 4px;
-  border: 1px solid #fff;
-  z-index: -2;
+  border: 2px solid #37a168;
 }
 .under-anc a::after {
   content: "";
-  position: absolute;
-  right: 3px;
-  bottom: 3px;
-  width: 0;
-  height: 0;
-  z-index: -1;
-  border-style: solid;
-  border-width: 0 0 26px 26px;
-  border-color: transparent transparent #fff transparent;
+  width: 18px;
+  height: 8px;
+  background-image: url(../images/ic-right.png);
+  background-size: cover;
   transition: all 0.3s ease;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1);
 }
 .under-anc a:hover {
-  background-color: #1b1b1b;
-  color: #ffe61e;
+  background-color: #fff;
+  color: #37a168;
 }
 .under-anc a:hover::after {
-  border-color: transparent transparent #ffe61e transparent;
+  right: 5px;
 }
 
 .main-under #content {
@@ -691,14 +684,11 @@
   line-height: 2;
   letter-spacing: -0.5px;
 }
-.main-under a {
-  color: #000;
-}
 .main-under a:hover {
   color: #37a168;
 }
 .main-under .red-cl {
-  color: #FF4B4B;
+  color: #ff4b4b;
 }
 .main-under .sech3 {
   position: relative;

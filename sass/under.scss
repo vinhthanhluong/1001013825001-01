@@ -105,10 +105,10 @@
     .h3 {
         text-align: center;
         margin-bottom: 51px;
-        span{
+        span {
             display: block;
         }
-        .h3-en{
+        .h3-en {
             font-size: 60px;
             font-weight: 500;
             color: $main-cl;
@@ -117,7 +117,7 @@
             letter-spacing: 2px;
         }
 
-        .h3-jp{
+        .h3-jp {
             font-size: 18px;
             font-weight: bold;
             letter-spacing: 0px;
@@ -168,9 +168,8 @@
 // ======================== table ========================
 .under-tbl {
     &.tbl-center {
-        td,
         th {
-            // vertical-align: middle;
+            vertical-align: middle;
             text-align: center;
         }
     }
@@ -185,10 +184,9 @@
         font-weight: normal;
     }
 
-    td{
+    td {
         background-color: #efefef;
     }
-
 
     td,
     th {
@@ -381,11 +379,11 @@
         }
     }
 
-    li{
+    li {
         // padding: 10px;
     }
 
-    .u-clm{
+    .u-clm {
         border: 1px solid #333;
     }
 
@@ -400,7 +398,7 @@
         letter-spacing: 1px;
     }
 
-    .u-clm-img{
+    .u-clm-img {
         border-bottom: 1px solid #333;
         margin-bottom: 0;
         // text-align: center;
@@ -412,7 +410,7 @@
         // }
     }
 
-    .u-clm-desc{
+    .u-clm-desc {
         padding: 10px;
     }
 }
@@ -514,6 +512,7 @@
 
     a {
         background: $main-cl;
+        color: #fff;
         font-weight: 500;
         display: flex;
         align-items: center;
@@ -529,38 +528,30 @@
         padding: 10px;
         line-height: 1.2;
         text-align: center;
+        border: 2px solid $main-cl;
 
-        &::before {
-            content: "";
-            position: absolute;
-            left: 4px;
-            right: 4px;
-            top: 4px;
-            bottom: 4px;
-            border: 1px solid #fff;
-            z-index: -2;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            right: 3px;
-            bottom: 3px;
-            width: 0;
-            height: 0;
-            z-index: -1;
-            border-style: solid;
-            border-width: 0 0 26px 26px;
-            border-color: transparent transparent #fff transparent;
+        &::after{
+            content: '';
+            width: 18px;
+            height: 8px;
+            background-image: url(../images/ic-right.png);
+            background-size: cover;
             transition: all 0.3s ease;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            transition: all 0.3s ease;
+            filter: brightness(0) invert(1);
         }
 
         &:hover {
-            background-color: #1b1b1b;
-            color: #ffe61e;
+            background-color: #fff;
+            color: $main-cl;
 
-            &::after {
-                border-color: transparent transparent #ffe61e transparent;
+
+            &::after{
+                right: 5px;
             }
         }
     }
@@ -602,14 +593,14 @@
     }
 
     a {
-        color: #000;
+        // color: #000;
         &:hover {
             color: $main-cl;
         }
     }
 
-    .red-cl{
-        color: #FF4B4B;
+    .red-cl {
+        color: #ff4b4b;
     }
 
     //    =========================================== h4 ===========================================
@@ -648,8 +639,8 @@
 
     //    =========================================== h4 ===========================================
 
-    .sech{
-        .h4{
+    .sech {
+        .h4 {
             margin-bottom: 20px;
         }
     }
