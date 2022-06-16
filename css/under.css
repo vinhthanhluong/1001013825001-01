@@ -288,16 +288,24 @@
   font-weight: bold;
 }
 .under .h3 {
+  text-align: center;
+  margin-bottom: 51px;
+}
+.under .h3 span {
+  display: block;
+}
+.under .h3 .h3-en {
   font-size: 60px;
   font-weight: 500;
   color: #37a168;
   text-transform: uppercase;
   margin-bottom: 6px;
   letter-spacing: 2px;
-  text-align: center;
 }
-.under .h3 span {
-  display: block;
+.under .h3 .h3-jp {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0px;
 }
 .under .h4 {
   font-size: 36px;
@@ -306,6 +314,17 @@
   border-bottom: 1px solid #cccccc;
   letter-spacing: 0;
   margin-bottom: 31px;
+  position: relative;
+}
+.under .h4::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: #37a168;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .under .h5 {
   font-size: 24px;
@@ -362,7 +381,7 @@
   position: relative;
   overflow: hidden;
   padding: 0 0 0 16px;
-  margin-bottom: 2px;
+  margin-bottom: 8px;
   text-align: left;
   font-size: 16px;
 }
@@ -494,6 +513,36 @@
 }
 .under-clm dd {
   padding: 15px;
+}
+
+.under-column {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.under-column.col3 li {
+  width: 33.3333333333%;
+}
+.under-column .u-clm {
+  border: 1px solid #333;
+}
+.under-column .u-clm-head {
+  background-color: #37a168;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin: 0;
+  border-bottom: 1px solid #333;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.under-column .u-clm-img {
+  border-bottom: 1px solid #333;
+  margin-bottom: 0;
+  padding: 19px;
+}
+.under-column .u-clm-desc {
+  padding: 10px;
 }
 
 .under-pickup {
@@ -668,15 +717,6 @@
   background-color: #efefef;
   z-index: -1;
 }
-.main-under .sech3-head {
-  text-align: center;
-  margin-bottom: 51px;
-}
-.main-under .sech3-label {
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 0px;
-}
 .main-under .sech3-text {
   display: flex;
   align-items: center;
@@ -688,19 +728,18 @@
 .main-under .sech3-text p {
   transform: translateY(-19px);
 }
-.main-under .sech4 {
-  position: relative;
+.main-under .sech .h4 {
+  margin-bottom: 20px;
 }
-.main-under .sech4::before {
-  content: "";
-  width: 100%;
-  height: 5px;
-  background-color: #37a168;
-  border-radius: 10px;
-  position: absolute;
-  top: 0;
-  left: 0;
+.main-under .ulink {
+  color: #37a168;
+  text-decoration: underline;
 }
+.main-under .ulink:hover {
+  color: #f2db55;
+  text-decoration: none;
+}
+
 /*============================= Overnote =============================*/
 /*============================= HACK CSS =============================*/
 /* IE */
