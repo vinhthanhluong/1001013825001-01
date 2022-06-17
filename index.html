@@ -103,6 +103,7 @@
 
 <body class="index">
     <div id="wrapper">
+
         <header id="header">
             <div class="container">
                 <div class="header-main">
@@ -114,8 +115,8 @@
                                 alt="「液晶・半導体の設計・開発・組立ならソニック株式会社」">
                         </a>
                     </div>
-                    <div class="header-menu">
-                        <ul class="menu-list">
+                    <div class="header-menu-pc pc">
+                        <ul class="menu-list-pc">
                             <li>
                                 <a href="company/index.html">
                                     ソニックが選ばれている理由
@@ -126,11 +127,11 @@
                                     事業紹介・製品紹介
                                 </a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown-pc">
                                 <span>
                                     会社案内
                                 </span>
-                                <ul class="sub-menu">
+                                <ul class="sub-menu-pc">
                                     <li>
                                         <a href="company/about.html" class="mu-tam">会社概要</a>
                                     </li>
@@ -140,11 +141,11 @@
                                 </ul>
                             </li>
 
-                            <li class="dropdown">
+                            <li class="dropdown-pc">
                                 <span>
                                     採用情報
                                 </span>
-                                <ul class="sub-menu sbm">
+                                <ul class="sub-menu-pc sbm">
                                     <li>
                                         <a href="recruit/entry/" class="mu-tam">採用情報・募集要項</a>
                                     </li>
@@ -163,19 +164,60 @@
                             </li>
                         </ul>
                     </div>
-
-                    <div class="hamburger-btn ham-off">
-                        <!-- <div class="bar"></div> -->
-                        <div class="ham-bg"></div>
-                        <div class="ham-hv">
-                            <div><span><span></span></span></div>
-                            <div><span><span></span></span></div>
-                            <div><span><span></span></span></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </header>
+
+        <div class="idx-sp sp">
+            <div class="hamburger-btn ham-off">
+                <div class="ham-bg"></div>
+                <div class="ham-hv">
+                    <div><span><span></span></span></div>
+                    <div><span><span></span></span></div>
+                    <div><span><span></span></span></div>
+                </div>
+            </div>
+            <div class="overplay"></div>
+            <div class="header-menu">
+                <ul class="menu-list">
+                    <li class="dropdown">
+                        <span>
+                            会社案内
+                        </span>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="company/index.html" class="mu-tam">事業紹介</a>
+                            </li>
+                            <li>
+                                <a href="company/about.html" class="mu-tam">会社概要</a>
+                            </li>
+                            <li>
+                                <a href="news/" class="mu-email">NEWS</a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <li class="dropdown">
+                        <span>
+                            採用情報
+                        </span>
+                        <ul class="sub-menu sbm">
+                            <li>
+                                <a href="recruit/entry/" class="mu-tam">採用情報</a>
+                            </li>
+                            <li>
+                                <a href="recruit/index.html" class="mu-tam">先輩社員</a>
+                            </li>
+                            <li>
+                                <a href="recruit/entry/" class="mu-email">エントリー</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+    
+            </div>
+        </div>
+        
         <!-- end #header-->
         <main id="main">
             <div id="mainvisual">
@@ -431,13 +473,15 @@
                         </div>
 
                         <div class="rec-txt">
-                            <h3 class="rec-title">
-                                <span class="rec-en">recruit</span>
-                                <span class="rec-jp">採用情報</span>
-                            </h3>
-                            <p class="rec-label">
-                                “新しい明日”をつくる ｢人材｣
-                            </p>
+                            <div class="rec-head">
+                                <h3 class="rec-title">
+                                    <span class="rec-en">recruit</span>
+                                    <span class="rec-jp">採用情報</span>
+                                </h3>
+                                <p class="rec-label">
+                                    “新しい明日”をつくる ｢人材｣
+                                </p>
+                            </div>
                             <p class="rec-desc">
                                 ソニックでは、社員一人ひとりの技術や丁寧な仕事が、当社の実績に貢献していると考えています。そのため社員の皆さんには、資格支援制度や社内技能検定など、未経験者でも安心してスキルアップを目指せる環境を整えています。採用に関するページでは、募集要項や先輩社員へのインタビューのほか、よくあるご質問もご紹介。当社で働くことをご検討いただいている方は、ぜひ一度ご覧ください。
                             </p>
@@ -471,7 +515,7 @@
                                     <a href="recruit/entry/">
                                         <span class="rec-num">04</span>
                                         <span class="rec-tt">
-                                            エントリー
+                                            <span>エントリー</span>
                                         </span>
                                     </a>
                                 </li>
