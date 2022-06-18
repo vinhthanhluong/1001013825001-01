@@ -35,7 +35,7 @@ $(function () {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     autoplay: true,
-                    autoplaySpeed: 5000,
+                    autoplaySpeed: 8100,
                     arrows: false,
                     centerMode: false,
                     centerPadding: 0,
@@ -50,9 +50,20 @@ $(function () {
 
                         var html = '<div class="visual-pagi">' +
                             '<div class="pagi-line">' +
-                            '<div class="pagi-line-silde"></div>' +
+                                '<div class="line-shadow">' +
+                                '<svg x="0px" y="0px" width="250px" height="250px" viewBox="0 0 250 250" enable-background="new 0 0 250 250" xml:space="preserve"><path fill="none" stroke="#00a500" stroke-width="30" stroke-miterlimit="10" d="M0,125c0,69.035,55.963,125,125,125 c69.037,0,125-55.965,125-125C250,55.964,194.037,0,125,0"></path></svg>'
+                                + '</div>' +
+                                '<div class="line-form">' +
+                                '<svg x="0px" y="0px" width="250px" height="250px" viewBox="0 0 250 250" enable-background="new 0 0 250 250" xml:space="preserve"><path fill="none" stroke="#37a168" stroke-width="30" stroke-miterlimit="10" d="M0,125c0,69.035,55.963,125,125,125 c69.037,0,125-55.965,125-125C250,55.964,194.037,0,125,0"></path></svg>'
+                                + '</div>' +
+                                '<div class=line-s>'+ 
+                                '<svg x="0px" y="0px" width="250px" height="250px" viewBox="0 0 250 250" enable-background="new 0 0 250 250" xml:space="preserve"><path fill="none" stroke="#00a500" stroke-width="30" stroke-miterlimit="10" d="M0,125c0,69.035,55.963,125,125,125 c69.037,0,125-55.965,125-125C250,55.964,194.037,0,125,0"></path></svg>'
+                                +'</div>'+ 
                             '</div>' +
-                            '<div class="pagi-number">' + 0 + (index + 1) + '<svg><circle cx="50%" cy="50%" r="75" class="recruit-circle"></circle></svg></div>' +
+                            '<div class="pagi-number">' + 
+                                '<div class="number-first"> 0 </div>'+
+                                '<div class="number-second">'+ (index + 1) +'</div>'
+                            + '</div>' +
                             '<div class="pagi-tt">' +
                             '<span class ="pagi-tt-jp">' + targetText + '</span>' +
                             '<span class ="pagi-tt-en"> Business </span>' +
@@ -69,11 +80,11 @@ $(function () {
 
         sonic: function () {
             $("#sonic-slick").endlessRiver({
-                'speed' : 50
+                'speed': 50
             });
         },
-        
-        rec: function(){
+
+        rec: function () {
             // var offset = $('.recruit .rec-ig').offset();
             // var top = offset.top;
 
@@ -94,12 +105,12 @@ $(function () {
                     boxClass: 'wow',      // default
                     animateClass: 'animated', // default
                     offset: 0,          // default
-                    mobile:false,
+                    mobile: false,
                     live: false,       // default
                 }
             )
             wow.init();
-            
+
         }
     }
 
