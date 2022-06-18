@@ -840,7 +840,7 @@ p:last-child {
   overflow: hidden;
 }
 .hamburger-btn .ham-hv div span span {
-  background: rgb(255, 255, 255);
+  background: white;
   transition-duration: 375ms;
   transition-timing-function: ease-in-out;
 }
@@ -936,7 +936,6 @@ p:last-child {
 #header {
   background: #fff;
   width: 100%;
-  transition: all 0.3s ease;
   height: 80px;
   display: flex;
   align-items: center;
@@ -953,12 +952,6 @@ p:last-child {
   transform: translateX(6px);
   transition: all 0.3s ease;
 }
-#header.--fix h1 {
-  color: #fff;
-}
-#header.--fix .logo {
-  filter: brightness(0) invert(1);
-}
 #header .logo {
   transform: translateX(6px);
   transition: all 0.3s ease;
@@ -968,125 +961,6 @@ p:last-child {
   display: flex;
   align-content: center;
   justify-content: space-between;
-  position: relative;
-}
-
-.menu-list {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  column-gap: 60px;
-  letter-spacing: 1px;
-}
-.menu-list a {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 0.3s ease;
-}
-.menu-list .--active a {
-  color: #37a168;
-}
-.menu-list .--active .--active > a {
-  background-color: #37a168;
-  color: white;
-}
-
-.dropdown {
-  position: relative;
-}
-.dropdown .dropdown:hover > a {
-  background-color: #37a168;
-  color: white;
-}
-.dropdown span {
-  padding: 10px 14px 12px 0;
-  padding-right: 14px;
-  transition: all 0.3s ease;
-}
-.dropdown span::before {
-  content: "";
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 15px;
-  height: 3px;
-  background-color: #000;
-  border-radius: 0.5px;
-}
-.dropdown span::after {
-  content: "";
-  position: absolute;
-  right: 26px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 15px;
-  width: 3px;
-  background-color: #000;
-  border-radius: 0.5px;
-}
-
-.sub-menu {
-  position: absolute;
-  top: calc(100% + 12px);
-  left: 0;
-  width: 100%;
-  min-width: 130px;
-  background-color: #f2f2f2;
-}
-.sub-menu .sub-menu {
-  top: 0;
-  left: 100%;
-}
-.sub-menu li {
-  border-bottom: 1px solid #fff;
-}
-.sub-menu li:last-child {
-  border: none;
-}
-.sub-menu.sbm .mu-tam {
-  padding-left: 10px;
-  letter-spacing: -1px;
-}
-.sub-menu.sbm .mu-email {
-  padding-left: 6px;
-  letter-spacing: -2px;
-}
-.sub-menu .mu-tam::before {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 3px 0 3px 6px;
-  border-color: transparent transparent transparent #333333;
-  margin-right: 5px;
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
-}
-.sub-menu .mu-email::before {
-  content: "";
-  display: inline-block;
-  background-image: url("../images/svg/ic-email.svg");
-  background-size: cover;
-  width: 12px;
-  height: 8px;
-  margin-right: 6px;
-  transform: translateY(-1px);
-  transition: all 0.3s ease;
-}
-.sub-menu a,
-.sub-menu span {
-  padding: 11px 6px 12px 14px;
-  display: block;
-  font-size: 12px;
-  font-weight: 400;
-}
-.sub-menu a {
-  letter-spacing: 0;
   position: relative;
 }
 
@@ -1105,16 +979,23 @@ p:last-child {
   justify-content: space-between;
   transition: all 0.3s ease;
 }
-.menu-list-pc .--active a {
+.menu-list-pc > li:hover > a,
+.menu-list-pc > li:hover > span {
   color: #37a168;
 }
-.menu-list-pc .--active .--active > a {
-  background-color: #37a168;
-  color: white;
+.menu-list-pc .--active a {
+  color: #37a168;
 }
 
 .dropdown-pc {
   position: relative;
+}
+.dropdown-pc:hover > .sub-menu-pc {
+  transform: translateY(0);
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
 }
 .dropdown-pc span {
   padding: 10px 14px 12px 0;
@@ -1141,6 +1022,11 @@ p:last-child {
   width: 100%;
   min-width: 130px;
   background-color: #f2f2f2;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
 }
 .sub-menu-pc .sub-menu {
   top: 0;
@@ -1189,6 +1075,15 @@ p:last-child {
   display: block;
   font-size: 12px;
   font-weight: 400;
+}
+.sub-menu-pc a:hover,
+.sub-menu-pc span:hover {
+  color: #fff;
+  background-color: #37a168;
+}
+.sub-menu-pc a:hover::before,
+.sub-menu-pc span:hover::before {
+  filter: brightness(0) invert(1);
 }
 .sub-menu-pc a {
   letter-spacing: 0;

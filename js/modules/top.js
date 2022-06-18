@@ -4,7 +4,7 @@ $(function () {
 
     var obj = {
         init: function () {
-            this.aos();
+            // this.aos();
             this.visual();
             this.sonic();
             this.rec();

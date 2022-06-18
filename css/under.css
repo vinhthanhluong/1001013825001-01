@@ -521,7 +521,7 @@
   width: 100%;
 }
 .under-column.col3 li {
-  width: 33.3333333333%;
+  width: calc(100% / 3);
 }
 .under-column .u-clm {
   border: 1px solid #333;
