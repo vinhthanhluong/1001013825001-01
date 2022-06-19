@@ -959,15 +959,14 @@ p:last-child {
 
 #topic-path {
   padding: 15px 0;
-  display: none;
 }
 #topic-path .topic-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
 }
 #topic-path li {
-  font-size: 14px;
   position: relative;
 }
 #topic-path li::after {
@@ -975,6 +974,9 @@ p:last-child {
   font-size: 16px;
   display: inline-block;
   margin: 0 4px;
+}
+#topic-path li:last-child:after {
+  display: none;
 }
 #topic-path a:hover {
   color: #37a168;
@@ -1159,24 +1161,24 @@ p:last-child {
   background: #37a168;
   letter-spacing: 1.4px;
 }
-#footer .footer-top {
+#footer .footer-bottom {
   background-color: #f9f9f9;
   padding: 47px 0 98px;
 }
-#footer .col {
+#footer .footer-bottom .col {
   border-left: 1px #37a168 solid;
 }
-#footer .col:nth-child(1) {
+#footer .footer-bottom .col:nth-child(1) {
   width: calc(100% - 458px);
   border: none;
 }
-#footer .col:nth-child(2) {
+#footer .footer-bottom .col:nth-child(2) {
   width: 232px;
 }
-#footer .col:nth-child(3) {
+#footer .footer-bottom .col:nth-child(3) {
   width: 226px;
 }
-#footer .col:nth-child(2), #footer .col:nth-child(3) {
+#footer .footer-bottom .col:nth-child(2), #footer .footer-bottom .col:nth-child(3) {
   margin-top: 39px;
 }
 #footer .ft-logo {

@@ -3,8 +3,8 @@ $(function () {
     console.log('( •ิཬ•ั ) Hello!!!');
     function anchorLink(el) {
         var p = $(el).offset();
-        var offsetPC = 0;
-        var offsetSP = 0;
+        var offsetPC = 100;
+        var offsetSP = 70;
         if ($(window).width() > 750) {
             $('html,body').animate({ scrollTop: p.top - offsetPC }, 400);
         } else {

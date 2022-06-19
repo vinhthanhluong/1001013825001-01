@@ -609,19 +609,63 @@
     position: relative;
     transform: none;
     top: 0;
-    padding-top: 30px;
+    padding: 20px 15px;
     width: calc(100% + 30px);
+    margin-left: -15px;
     background-color: #fff;
   }
   .index-visual .visual-title {
-    font-size: 9vw;
+    font-size: 8vw;
     margin-bottom: 30px;
   }
   .index-visual .visual-title .vis-tb {
     padding-left: 5vw;
   }
   .index-visual .visual-label {
-    font-size: 3.2vw;
+    font-size: 3vw;
+  }
+  .index-visual .visual-img {
+    width: 66.667vw;
+    height: 66.667vw;
+    margin: -10.66667vw 0 0 auto;
+    transform: translateX(-23px);
+  }
+  .index-visual .visual-img::before {
+    display: none;
+  }
+  .index-visual .visual-img::after {
+    width: 66.667vw;
+    height: 66.667vw;
+  }
+  .index-visual .vis-ig div {
+    background-size: cover;
+    background-position: center;
+  }
+  .index-visual .slick-dots {
+    left: 71px;
+    bottom: 60px;
+  }
+  .index-visual .pagi-line {
+    width: 100px;
+    height: 100px;
+    left: -58px;
+    top: -13px;
+  }
+  .index-visual .pagi-number {
+    font-size: 44px;
+  }
+  .index-visual .pagi-tt {
+    padding: 5px 0 0 15px;
+  }
+  .index-visual .pagi-tt-jp {
+    font-size: 24px;
+  }
+  .index-visual .pagi-tt-en {
+    font-size: 14px;
+  }
+  .index-visual .visual-contact {
+    opacity: 0;
+    visibility: hidden;
   }
 
   .sonic {
@@ -854,15 +898,15 @@
   #footer .container-1200 {
     padding: 0 15px;
   }
-  #footer .footer-top {
+  #footer .footer-bottom {
     padding: 50px 0;
   }
-  #footer .col {
+  #footer .footer-bottom .col {
     width: 100% !important;
     display: flex;
     justify-content: center;
   }
-  #footer .col:nth-child(2), #footer .col:nth-child(3) {
+  #footer .footer-bottom .col:nth-child(2), #footer .footer-bottom .col:nth-child(3) {
     display: none;
   }
   #footer .ft-logo img {
@@ -878,6 +922,14 @@
     height: 54px;
   }
 
+  .index-visual .visual-img {
+    width: 320px;
+    height: 320px;
+  }
+  .index-visual .visual-img::after {
+    width: 315px;
+    height: 325px;
+  }
   .sonic {
     padding: 50px 0;
   }

@@ -14,13 +14,12 @@
 
 /* end screen-min:751px */
 
-@media screen and (min-width: 751px) and (max-width: 1500px) {
-    
-}
+@media screen and (min-width: 751px) and (max-width: 1500px) {}
 
 /* end screen-min:751px && screen-max:1500px */
 
 @include max-media(750px) {
+
     .img-r,
     .img-l {
         float: none;
@@ -28,23 +27,31 @@
         margin: 0 0 20px;
     }
 
+    .img-p{
+        text-align: center;
+    }
+
+    // =============== table ===============
     .under-tbl {
         tr {
-            th + td {
+            th+td {
                 border-top: none;
             }
+
             &:not(:first-child) th {
                 border-top: none;
             }
         }
 
-        th , td{
+        th,
+        td {
             padding: 15px;
         }
     }
 
     .tbl-block {
         display: block;
+        tbody,
         thead,
         tr,
         td,
@@ -67,19 +74,120 @@
         min-width: 640px;
     }
 
-    .under {
-        .h3{
-            font-size: 40px;
+    // =============== end table ===============
+
+    .under-visual {
+        padding-bottom: 40px;
+        .container-1200{
+            padding:0 15px;
         }
 
-        .h4{
-            font-size: 26px;    
+        .uvis-jp{
+            font-size: 6.66666vw;
+            padding-right: 40px;
+            text-shadow: 0px 0px 25px #fff;
+
+            &::after{
+                height: 5px;
+                bottom: 10px;
+            }
+        }
+
+        .uvis-en{
+            padding-right: 40px;
+            font-size: 18px;
+            text-shadow: 0px 0px 15px #fff;
+
+        }
+
+        .uvisual-ig {
+            width: 68vw;
+            height: 68vw;
+            margin: -14vw 25px 0 auto;
+
+            &::after {
+                content: '';
+                width: 68vw;
+                height: 68vw;
+                transform: translate(25px, -5px);
+            }
+        }
+
+        .uvis-img {
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    .under-anc {
+        margin: -1% !important;
+
+        li {
+            width: 100% !important;
+            max-width: 300px;
+            margin: 1% !important;
+        }
+
+        a{
+            font-size: 16px;
+        }
+    }
+
+    .under-clm {
+        &.col3{
+            dl{
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+                border-left: 1px solid #505050;
+            }
+        }
+       
+    }
+
+    .under-banner{
+        &.col2{
+            li{
+                width: 100%;
+            }
+        }
+        .uban-wrap{
+            padding: 30px 10px;
+        }
+        
+        .uban-tt{
+            font-size: 20px;
+        }
+
+        .uban-lk{
+            font-size: 20px;
+        }
+    }
+
+    .under {
+        .tt-30{
+            font-size: 22px;
+        }
+        .h3 {
+            margin-bottom: 35px;
+            .h3-en {
+                font-size: 40px;
+            }
+
+            .h3-jp{
+                font-size: 16px;
+            }
+        }
+
+        .h4 {
+            font-size: 26px;
             padding: 18px 0 16px;
         }
 
-        .h5{
+        .h5 {
             font-size: 20px;
-            &::before{
+
+            &::before {
                 margin-right: 10px;
                 width: 18px;
                 height: 4px;
@@ -87,42 +195,42 @@
         }
     }
 
-    .main-under{
+    .main-under {
         #content {
             width: 100%;
-            padding: 10px 15px 50px;
+            padding: 0px 15px 50px;
         }
 
-        .sech3{
-            &::before{
+        .sech3 {
+            margin-bottom: 60px;
+            &::before {
                 top: 28px;
             }
         }
 
-        .sech3-head{
-            margin-bottom: 30px;
-        }
-
-        .sech3-label{
-            font-size: 16px;
-        }
-
-        .sech3-text{
+        .sech3-text {
             flex-wrap: wrap;
-            p{
+
+            p {
                 transform: none;
+            }
+
+            &.reverse{
+                .sech3-img{
+                    margin: 0 0 20px 0;
+                }
             }
         }
 
-        .sech3-img{
+        .sech3-img {
             flex-shrink: 1;
             width: 100%;
             margin: 0 0 20px 0;
             text-align: center;
         }
 
-        .sech4{
-            &::before{
+        .sech4 {
+            &::before {
                 height: 3px;
             }
         }
@@ -132,57 +240,80 @@
 
 /* end screen-max:750px */
 
-@include max-media(640px) {
-}
+@include max-media(640px) {}
 
 /* end screen-max:640px */
 
-@include max-media(560px) {
-}
+@include max-media(560px) {}
 
 /* end screen-max:560px */
 
 @include max-media(520px) {
+    .under-visual {
+        .uvisual-ig{
+            margin-right: 16px;
+            &::after{
+                transform: translate(16px, 0);
+            }
+        }
+    }
+
+    .under {
+        .section , section{
+            margin-bottom: 50px;
+        }
+        .tt-30{
+            font-size: 20px;
+        }
+        
+        .h3 {
+            .h3-en{
+                font-size: 34px;
+            }
+        }
+
+        .h4{
+            font-size: 22px;
+        }
+
+        .h5{
+            font-size: 18px;
+        }
+        
+    }
 }
 
 /* end screen-max:520px */
 
-@include max-media(475px) {
-}
+@include max-media(475px) {}
 
 /* end screen-max:475px */
 
-@include max-media(425px) {
-}
+@include max-media(425px) {}
 
 /* end screen-max:425px */
 
-@include max-media(375px) {
-}
+@include max-media(375px) {}
 
 /* end screen-max:375px */
 
-@include max-media(320px) {
-}
+@include max-media(320px) {}
 
 /* end screen-max:320px */
 
 /*============================= HACK CSS =============================*/
 
 /* IE */
-@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-}
+@media (-ms-high-contrast: none),
+(-ms-high-contrast: active) {}
 
 /* EGDE */
-@supports (-ms-ime-align: auto) {
-}
+@supports (-ms-ime-align: auto) {}
 
 /* FIREFOX */
-@-moz-document url-prefix() {
-}
+@-moz-document url-prefix() {}
 
 /* Safari 10.1+ (which is the latest version of Safari at this time) */
 @media not all and (min-resolution: 0.001dpcm) {
-    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-    }
+    @supports (-webkit-appearance: none) and (stroke-color: transparent) {}
 }

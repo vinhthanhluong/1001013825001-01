@@ -1,21 +1,26 @@
 #topic-path {
     padding: 15px 0;
     // background: #fff;
-    display: none;  
     .topic-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
+        align-items: center;
     }
 
     li {
-        font-size: 14px;
         position: relative;
         &::after{
             content: '>';
             font-size: 16px;
             display: inline-block;
             margin: 0 4px;
+        }
+
+        &:last-child{
+            &:after{
+                display: none;
+            }
         }
     }
 

@@ -496,13 +496,14 @@
             position: relative;
             transform: none;
             top: 0;
-            padding-top: 30px;
+            padding: 20px 15px;
             width: calc(100% + 30px);
+            margin-left: -15px;
             
             background-color: #fff;
         }
         .visual-title{
-            font-size: 9vw;
+            font-size: 8vw;
             margin-bottom: 30px;
 
             .vis-tb{
@@ -511,7 +512,65 @@
         }
 
         .visual-label{
-            font-size: 3.2vw;
+            font-size: 3vw;
+        }
+
+        .visual-img{
+            width: 66.667vw;
+            height: 66.667vw;
+            // margin: -80px 0 0 auto;
+            margin: -10.66667vw 0 0 auto;
+            transform: translateX(-23px);
+
+            &::before{
+                display: none;
+            }
+
+            &::after{
+                width: 66.667vw;
+                height: 66.667vw;
+            }
+        }
+
+        .vis-ig{
+            div{
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        .slick-dots{
+            left: 71px;
+            bottom: 60px;
+
+        }
+
+        .pagi-line{
+            width: 100px;
+            height: 100px;
+            left: -58px;
+            top: -13px;
+        }
+
+        .pagi-number{
+            font-size: 44px;
+        }
+
+        .pagi-tt{
+            padding: 5px 0 0 15px;
+        }
+
+        .pagi-tt-jp{
+            font-size: 24px;
+        }
+
+        .pagi-tt-en{
+            font-size: 14px;
+        }
+        
+
+        .visual-contact{
+            @include hidden;
         }
     }
 
@@ -811,18 +870,17 @@
             padding: 0 15px;
         }
 
-        .footer-top {
+        .footer-bottom {
             padding: 50px 0;
-        }
-
-        .col {
-            width: 100% !important;
-            display: flex;
-            justify-content: center;
-
-            &:nth-child(2),
-            &:nth-child(3) {
-                display: none;
+            .col {
+                width: 100% !important;
+                display: flex;
+                justify-content: center;
+    
+                &:nth-child(2),
+                &:nth-child(3) {
+                    display: none;
+                }
             }
         }
 
@@ -848,6 +906,20 @@
     .btn {
         width: 200px;
         height: 54px;
+    }
+
+    .index-visual {
+        .visual-img{
+            width: 320px;
+            height: 320px;
+            &::after{
+                width: 315px;
+                height: 325px;
+            }
+        }
+
+        .slick-dots{
+        }
     }
 
     .sonic {

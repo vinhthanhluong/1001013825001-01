@@ -5,9 +5,11 @@
 
 /*============================= G L O B A L =============================*/
 .under {
+
     section,
     .section {
         margin-bottom: 60px;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -17,34 +19,44 @@
 // ======================== mainvisual ========================
 .under-visual {
     padding: 0 0 100px;
+
     .uvisual-wrapper {
         position: relative;
     }
-    .uvisual-txt {
+
+    .uvisual-title {
         position: absolute;
         top: calc(69% + 1px);
         left: 0;
         transform: translateY(-50%);
         z-index: 1;
+
+        span {
+            display: block;
+        }
     }
-    h2 {
+
+    .uvis-jp {
+        position: relative;
         font-size: 60px;
         font-weight: bold;
-        position: relative;
         padding-bottom: 30px;
+        padding-right: 50px;
         margin-bottom: 5px;
+
         &::after {
             content: "";
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 480px;
+            width: 100%;
             height: 10px;
             background-color: $main-cl;
             border-radius: 10px;
         }
     }
-    .upage-title {
+
+    .uvis-en {
         font-size: 24px;
         color: $main-cl;
         font-weight: bold;
@@ -52,6 +64,8 @@
         text-align: right;
         transform: translateX(-5px);
         letter-spacing: -0.5px;
+        padding-right: 50px;
+
     }
 
     .uvisual-ig {
@@ -60,6 +74,7 @@
         margin: -307px -5px 0 auto;
         position: relative;
         z-index: 0;
+
         &::after {
             content: "";
             position: absolute;
@@ -82,7 +97,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        background-image: url("../images/uvisual-img.jpg");
+        // background-image: url("../images/uvisual-img.jpg");
         background-repeat: no-repeat;
         background-position: 78% -122%;
         border-radius: 100%;
@@ -91,6 +106,7 @@
 
 // ======================== heading ========================
 .under {
+
     .h3,
     .h4,
     .h5,
@@ -103,9 +119,11 @@
     .h3 {
         text-align: center;
         margin-bottom: 51px;
+
         span {
             display: block;
         }
+
         .h3-en {
             font-size: 60px;
             font-weight: 500;
@@ -130,6 +148,7 @@
         letter-spacing: 0;
         margin-bottom: 31px;
         position: relative;
+
         &::before {
             content: "";
             width: 100%;
@@ -149,6 +168,7 @@
         color: $main-cl;
         margin-bottom: 27px;
         letter-spacing: 0;
+
         &::before {
             content: "";
             width: 20px;
@@ -192,6 +212,7 @@
         vertical-align: top;
         padding: 20px;
         text-align: left;
+        line-height: 1.6;
     }
 }
 
@@ -202,18 +223,20 @@
             list-style-type: decimal;
             list-style-position: inside;
             padding-left: 0;
+
             &::before {
                 display: none;
             }
         }
     }
+
     li {
         position: relative;
         overflow: hidden;
         padding: 0 0 0 16px;
         margin-bottom: 8px;
         text-align: left;
-        font-size: 16px;
+        line-height: 1.6;
 
         &::before {
             content: "";
@@ -264,6 +287,7 @@
 .under-step {
     dl {
         margin-bottom: 30px;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -296,6 +320,7 @@
         margin-bottom: 30px;
         box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.16);
         padding: 20px;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -310,6 +335,7 @@
         display: flex;
         align-items: center;
         border-bottom: 1px #000 dashed;
+
         .qa-kt {
             top: 5px;
         }
@@ -332,6 +358,7 @@
         position: relative;
         padding-left: 60px;
         min-height: 40px;
+
         .qa-kt {
             top: 0;
         }
@@ -340,23 +367,38 @@
 
 .under-clm {
     display: flex;
+    flex-wrap: wrap;
+
     &.col2 {
         dl {
             width: 50%;
-        }
-    }
-    dl {
-        width: 100%;
-        border: 1px solid #505050;
-        &:last-child {
-            content: "";
-            border-left: 0;
+
+            &:nth-child(2n-1) {
+                border-left: 1px solid #505050;
+            }
         }
     }
 
+    &.col3 {
+        dl {
+            width: calc(100% / 3);
+
+            &:nth-child(3n-2) {
+                border-left: 1px solid #505050;
+            }
+        }
+    }
+
+    dl {
+        width: 100%;
+        border: 1px solid #505050;
+        border-left: none;
+    }
+
     dt {
-        background-color: $main-cl3;
-        padding: 10px;
+        background-color: $main-cl;
+        color: #fff;
+        padding: 20px;
         text-align: center;
         border-bottom: 1px solid #505050;
     }
@@ -364,12 +406,17 @@
     dd {
         padding: 15px;
     }
+
+    .uclm-img {
+        text-align: center;
+    }
 }
 
 .under-column {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
     // margin:  -10px;
     &.col3 {
         li {
@@ -420,6 +467,7 @@
     left: 50%;
     transform: translateX(-50%);
     padding: 60px 0;
+
     &::before {
         position: absolute;
         content: "";
@@ -430,6 +478,7 @@
         background: $main-cl;
         z-index: -1;
     }
+
     .pu-wrapper {
         max-width: 1200px;
         width: 100%;
@@ -445,6 +494,7 @@
     h4 {
         display: inline-block;
         margin-bottom: 24px;
+
         span {
             display: block;
         }
@@ -474,27 +524,49 @@
     }
 }
 
-.under-link {
-    text-align: center;
-    margin: 0 0 200px;
+.under-banner {
 
-    .lk-head {
-        margin-bottom: 49px;
+    &.col2 {
+        margin: -1%;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            margin: 1%;
+            width: 48%;
+        }
     }
 
-    .lk-tt {
-        font-size: 48px;
-        font-weight: 500;
-        margin-bottom: 23px;
-        text-transform: uppercase;
-        letter-spacing: 4px;
+    li {
+        width: 100%;
     }
 
-    .lk-desc {
-        font-size: 24px;
+    .uban-wrap {
+        text-align: center;
+        letter-spacing: 1px;
+        padding: 37px 15px 38px;
+        border: 6px double $main-cl;
+        transition: all .3s ease;
+        background-image: linear-gradient(135deg, rgba(104, 180, 139, 0.8) 0%, rgba(55, 161, 104, 0.8) 50%, rgba(20, 117, 70, 0.8) 100%);
+        // background-color: rgba($color: $y-cl, $alpha: 0.4);
+        color: #fff;
+    }
+
+    .uban-tt {
+        margin-bottom: 15px;
+        font-size: 26px;
+        line-height: 1.6;
+        letter-spacing: 0.5px;
+    }
+
+    .uban-lk {
         font-weight: bold;
-        letter-spacing: -1px;
-        margin-bottom: 0;
+        font-size: 26px;
+        color: $y-cl;
+
+        &:hover {
+            color: #fff;
+        }
     }
 }
 
@@ -503,20 +575,26 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    text-align: center;
 
-    li {
-        margin: 0 24px 20px;
+    &.col5 {
+        margin: -1% -0.5%;
+
+        li {
+            width: calc(95% / 5);
+            margin: 1% 0.5%;
+        }
     }
 
     a {
-        background: $main-cl;
-        color: #fff;
+        background: #fff;
+        color: $main-cl;
         font-weight: 500;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
-        width: 365px;
+        width: 100%;
         height: 70px;
         text-decoration: none;
         font-size: 20px;
@@ -528,11 +606,11 @@
         text-align: center;
         border: 2px solid $main-cl;
 
-        &::after{
+        &::after {
             content: '';
             width: 18px;
             height: 8px;
-            background-image: url(../images/ic-right.png);
+            background-image: url('../images/ic-right.png');
             background-size: cover;
             transition: all 0.3s ease;
             position: absolute;
@@ -540,16 +618,15 @@
             right: 15px;
             transform: translateY(-50%);
             transition: all 0.3s ease;
-            filter: brightness(0) invert(1);
         }
 
         &:hover {
-            background-color: #fff;
-            color: $main-cl;
+            background-color: $main-cl;
+            color: #fff !important;
 
-
-            &::after{
+            &::after {
                 right: 5px;
+                filter: brightness(0) invert(1);
             }
         }
     }
@@ -584,21 +661,29 @@
     dt,
     dd,
     dl {
-        // font-size: 18px;
+        // font-size: 16px;
         // letter-spacing: -0.6px;
         // line-height: 2;
         // font-weight: 500;
     }
 
     a {
+
         // color: #000;
         &:hover {
             color: $main-cl;
         }
     }
 
-    .red-cl {
-        color: #ff4b4b;
+    .u-lk-b {
+        &:hover {
+            color: #000;
+        }
+    }
+
+    .tt-30 {
+        font-size: 30px;
+        line-height: 1.6;
     }
 
     //    =========================================== h4 ===========================================
@@ -606,6 +691,7 @@
         position: relative;
         z-index: 0;
         margin-bottom: 100px;
+
         &::before {
             content: "";
             min-width: 1280px;
@@ -623,12 +709,21 @@
     .sech3-text {
         display: flex;
         align-items: center;
+
+        &.reverse {
+            flex-direction: row-reverse;
+
+            .sech3-img {
+                margin: 0 0 0 60px;
+            }
+        }
     }
 
     .sech3-img {
         flex-shrink: 0;
         margin: 0 60px 0 0;
     }
+
     .sech3-text {
         p {
             transform: translateY(-19px);
@@ -660,16 +755,14 @@
 /*============================= HACK CSS =============================*/
 
 /* IE */
-@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-}
+@media (-ms-high-contrast: none),
+(-ms-high-contrast: active) {}
 
 /* EGDE */
-@supports (-ms-ime-align: auto) {
-}
+@supports (-ms-ime-align: auto) {}
 
 /* FIREFOX */
-@-moz-document url-prefix() {
-}
+@-moz-document url-prefix() {}
 
 /* Safari 10.1+ (which is the latest version of Safari at this time) */
 @media not all and (min-resolution: 0.001dpcm) {
