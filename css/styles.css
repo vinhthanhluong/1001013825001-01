@@ -598,12 +598,30 @@ p:last-child {
     opacity: 1;
   }
 }
+@keyframes slide-off-num0 {
+  0% {
+    transform: translateY(0) rotateX(0);
+  }
+  100% {
+    transform: translateY(-50%) rotateX(90deg);
+  }
+}
 @keyframes slide-on-num0 {
   0% {
     opacity: 0;
+    transform: translateY(50%) rotateX(90deg);
   }
   100% {
     opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+@keyframes slide-on-num1 {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #333333;
   }
 }
 .tt-14 {
@@ -1207,31 +1225,31 @@ p:last-child {
 }
 
 /*============================= C_O_N_T_E_N_T =============================*/
-.index #mainvisual .visual-wrapper {
+.index-visual .visual-wrapper {
   position: relative;
 }
-.index #mainvisual .visual-head {
+.index-visual .visual-head {
   position: absolute;
   top: calc(40% + 2px);
   left: 0;
   transform: translateY(-50%);
   z-index: 2;
 }
-.index #mainvisual .visual-title {
+.index-visual .visual-title {
   font-size: 85px;
   font-weight: 800;
   margin-bottom: 48px;
 }
-.index #mainvisual .visual-title .fs-small {
+.index-visual .visual-title .fs-small {
   font-size: 62.3529%;
   margin-left: -14px;
 }
-.index #mainvisual .visual-title .vis-tb {
+.index-visual .visual-title .vis-tb {
   padding-left: 52px;
   display: block;
   margin-top: 16px;
 }
-.index #mainvisual .visual-label {
+.index-visual .visual-label {
   display: inline-block;
   font-size: 30px;
   letter-spacing: 4.4px;
@@ -1243,13 +1261,13 @@ p:last-child {
   line-height: 1;
   margin-left: 23px;
 }
-.index #mainvisual .visual-contact {
+.index-visual .visual-contact {
   position: absolute;
   bottom: 41px;
   right: calc((100vw - 100%) / -2);
   z-index: 1;
 }
-.index #mainvisual .visual-contact::after {
+.index-visual .visual-contact::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1261,7 +1279,7 @@ p:last-child {
   border-radius: 100px 0 0 100px;
   background-color: #147546;
 }
-.index #mainvisual .v-contact-wrap {
+.index-visual .v-contact-wrap {
   position: relative;
   width: 100%;
   width: 508px;
@@ -1274,7 +1292,7 @@ p:last-child {
   background-color: #fff;
   z-index: 0;
 }
-.index #mainvisual .vis-cont-tt {
+.index-visual .vis-cont-tt {
   font-size: 26px;
   font-weight: bold;
   color: #147546;
@@ -1284,7 +1302,7 @@ p:last-child {
   margin-bottom: 7px;
   position: relative;
 }
-.index #mainvisual .vis-cont-tt::after {
+.index-visual .vis-cont-tt::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1293,14 +1311,14 @@ p:last-child {
   height: 1px;
   background-color: #cccccc;
 }
-.index #mainvisual .vis-tell {
+.index-visual .vis-tell {
   font-weight: bold;
   font-size: 28px;
   position: relative;
   margin-bottom: 13px;
   letter-spacing: 0px;
 }
-.index #mainvisual .vis-tell::before {
+.index-visual .vis-tell::before {
   content: "";
   background-image: url("../images/svg/ic-tell.svg");
   width: 14px;
@@ -1308,7 +1326,7 @@ p:last-child {
   display: inline-block;
   margin-right: 8px;
 }
-.index #mainvisual .vis-lk {
+.index-visual .vis-lk {
   width: 224px;
   height: 50px;
   border-radius: 4px;
@@ -1320,7 +1338,7 @@ p:last-child {
   justify-content: center;
   transform: translate(-5px, -5px);
 }
-.index #mainvisual .vis-lk::before {
+.index-visual .vis-lk::before {
   content: "";
   display: inline-block;
   background-image: url("../images/ic-email3.png");
@@ -1331,48 +1349,57 @@ p:last-child {
   margin-right: 10px;
   transition: all 0.3s ease;
 }
-.index #mainvisual .vis-lk span {
+.index-visual .vis-lk span {
   font-size: 18px;
 }
-.index #mainvisual .vis-lk:hover {
+.index-visual .vis-lk:hover {
   background-color: #37a168;
   color: #fff;
 }
-.index #mainvisual .vis-lk:hover::before {
+.index-visual .vis-lk:hover::before {
   filter: brightness(0) invert(1);
 }
-.index #mainvisual .slick-list {
+.index-visual .slick-list {
   overflow: visible;
 }
-.index #mainvisual .slick-active .line-form path {
+.index-visual .slick-active .line-form path {
   animation: home-loader-on0 8s linear forwards;
 }
-.index #mainvisual .slick-active .line-s path {
+.index-visual .slick-active .line-s path {
   animation: home-loader-on1 1s 8s linear forwards;
 }
-.index #mainvisual .slick-active .vis-ig {
+.index-visual .slick-active .vis-ig {
   animation: slide-on0 2.5s ease-in-out forwards;
 }
-.index #mainvisual .slick-active .vis-ig div {
+.index-visual .slick-active .vis-ig div {
   animation: slide-on1 10s linear forwards;
 }
-.index #mainvisual .slick-active .visual-img::after {
+.index-visual .slick-active .visual-img::after {
   animation: slide-af1 2.5s ease-in-out forwards;
 }
-.index #mainvisual .slick-active .pagi-tt {
-  animation: slide-on-text0 1s ease-in-out 1s forwards;
+.index-visual .slick-active .num-f span {
+  animation: slide-on-num1 1.5s ease-in-out forwards;
 }
-.index #mainvisual .slick-active .pagi-tt span {
+.index-visual .slick-active .number-first {
+  animation: slide-on-num0 1s ease-in-out 0.85s forwards;
+}
+.index-visual .slick-active .number-second {
+  animation: slide-on-num0 1s ease-in-out 0.75s forwards;
+}
+.index-visual .slick-active .pagi-tt {
+  animation: slide-on-text0 1s ease-in-out 2s forwards;
+}
+.index-visual .slick-active .pagi-tx span {
   animation: slide-on-text1 1.25s ease-in-out forwards;
 }
-.index #mainvisual .vis-nw {
+.index-visual .vis-nw {
   position: relative;
   overflow: hidden;
   border-radius: 100%;
   height: 100%;
   background-color: #fff;
 }
-.index #mainvisual .visual-img {
+.index-visual .visual-img {
   width: 1003px;
   height: 1003px;
   margin: 0 -35px 0 auto;
@@ -1380,7 +1407,7 @@ p:last-child {
   position: relative;
   z-index: 0;
 }
-.index #mainvisual .visual-img::after {
+.index-visual .visual-img::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -1395,7 +1422,7 @@ p:last-child {
   z-index: -1;
   animation: slide-af0 2.5s ease-in-out forwards;
 }
-.index #mainvisual .visual-img::before {
+.index-visual .visual-img::before {
   content: "";
   position: absolute;
   bottom: 15%;
@@ -1406,18 +1433,18 @@ p:last-child {
   border-radius: 10px;
   z-index: -1;
 }
-.index #mainvisual .visual-img img {
+.index-visual .visual-img img {
   height: 100%;
   object-fit: cover;
   border-radius: 100%;
 }
-.index #mainvisual .visual-img p {
+.index-visual .visual-img p {
   display: none;
 }
-.index #mainvisual .visual-img a {
+.index-visual .visual-img a {
   display: none;
 }
-.index #mainvisual .vis-ig {
+.index-visual .vis-ig {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1427,7 +1454,7 @@ p:last-child {
   animation: slide-off0 2.5s ease-in-out forwards;
   opacity: 0;
 }
-.index #mainvisual .vis-ig div {
+.index-visual .vis-ig div {
   background-repeat: no-repeat;
   background-position: -311px 17px;
   position: absolute;
@@ -1436,30 +1463,30 @@ p:last-child {
   top: 0;
   left: 0;
 }
-.index #mainvisual .slick-dots {
+.index-visual .slick-dots {
   position: absolute;
   bottom: 100px;
   left: calc(14% + 8px);
   width: auto;
 }
-.index #mainvisual .slick-dots li {
+.index-visual .slick-dots li {
   width: auto;
   height: auto;
   display: none;
   margin: 0;
 }
-.index #mainvisual .slick-dots li.slick-active {
+.index-visual .slick-dots li.slick-active {
   display: block;
 }
-.index #mainvisual .visual-pagi {
+.index-visual .visual-pagi {
   display: flex;
   position: relative;
   transition: all 0.3s ease;
 }
-.index #mainvisual .visual-pagi:hover {
+.index-visual .visual-pagi:hover {
   color: #37a168;
 }
-.index #mainvisual .pagi-line {
+.index-visual .pagi-line {
   position: absolute;
   top: -17px;
   left: -90px;
@@ -1469,7 +1496,7 @@ p:last-child {
   border-radius: 100%;
   transform: rotate(107deg);
 }
-.index #mainvisual .pagi-line div {
+.index-visual .pagi-line div {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1477,53 +1504,75 @@ p:last-child {
   left: 0;
   overflow: hidden;
 }
-.index #mainvisual .pagi-line svg, .index #mainvisual .pagi-line path {
+.index-visual .pagi-line svg,
+.index-visual .pagi-line path {
   display: inline-block;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
-.index #mainvisual .pagi-line path {
+.index-visual .pagi-line path {
   stroke-dasharray: 600;
 }
-.index #mainvisual .line-s path {
+.index-visual .line-s path {
   opacity: 0;
   stroke: #e6e6e6;
 }
-.index #mainvisual .line-shadow path {
+.index-visual .line-shadow path {
   animation: home-loader-off1 1.5s ease-in-out forwards;
 }
-.index #mainvisual .line-form path {
+.index-visual .line-form path {
   animation: home-loader-off0 0.5s ease-in-out forwards;
 }
-.index #mainvisual .recruit-circle {
+.index-visual .recruit-circle {
   stroke: #37a168;
   background: transparent;
 }
-.index #mainvisual .pagi-number {
+.index-visual .pagi-number {
   font-family: "Josefin Sans";
   font-size: 72px;
   line-height: 1;
   position: relative;
   display: flex;
 }
-.index #mainvisual .pagi-tt {
-  padding: 0 0 0 19px;
-  opacity: 0;
-  animation: slide-off-text0 1s ease-in-out forwards;
-}
-.index #mainvisual .pagi-tt span {
+.index-visual .pagi-number .num-f {
   display: block;
 }
-.index #mainvisual .pagi-tt-jp {
+.index-visual .pagi-number .num-f span {
+  display: block;
+}
+.index-visual .number-first {
+  opacity: 0;
+}
+.index-visual .number-first .num-f {
+  animation: slide-off-num0 1s ease-in-out 8s forwards;
+}
+.index-visual .number-second {
+  opacity: 0;
+}
+.index-visual .number-second .num-f {
+  animation: slide-off-num0 1s ease-in-out 7.8s forwards;
+}
+.index-visual .pagi-tt {
+  padding: 0 0 0 19px;
+  opacity: 0;
+}
+.index-visual .pagi-tt span {
+  display: block;
+}
+.index-visual .pagi-tx {
+  display: block;
+  animation: slide-off-text0 1s ease-in-out 8s forwards;
+}
+.index-visual .pagi-tt-jp {
   font-size: 48px;
   font-weight: bold;
   line-height: 1;
   letter-spacing: 5px;
   position: relative;
 }
-.index #mainvisual .pagi-tt-en {
+.index-visual .pagi-tt-en {
   font-family: "Josefin Sans";
   font-weight: 600;
   font-size: 18px;

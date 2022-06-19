@@ -61,13 +61,15 @@ $(function () {
                                 +'</div>'+ 
                             '</div>' +
                             '<div class="pagi-number">' + 
-                                '<div class="number-first"> 0 </div>'+
-                                '<div class="number-second">'+ (index + 1) +'</div>'
+                                '<span class="number-first"> <span class="num-f"><span>0</span></span> </span>'+
+                                '<span class="number-second"> <span class="num-f"><span>'+ (index + 1) +'</span></span></span>'
                             + '</div>' +
                             '<div class="pagi-tt">' +
-                            '<span class ="pagi-tt-jp">' + targetText + '</span>' +
-                            '<span class ="pagi-tt-en"> Business </span>' +
-                            '</div>' +
+                                '<span class="pagi-tx">' +
+                                    '<span class ="pagi-tt-jp">' + targetText + '</span>' +
+                                    '<span class ="pagi-tt-en"> Business </span>' 
+                                +'</span>'
+                            +'</div>' +
                             '<a href="' + targetLink + '" class="lk-full"> </a>' +
                             '</div>'
                         return html;
